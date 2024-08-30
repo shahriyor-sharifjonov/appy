@@ -30,7 +30,7 @@
                 @include resm('letter-spacing', -1px);
             }
             @include media(576){
-                @include resa('margin-bottom', 80px);
+                @include resa('margin-bottom', 40px);
                 @include resa('font-size', 40px);
                 @include resa('letter-spacing', -1px);
             }

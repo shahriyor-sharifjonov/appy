@@ -2,6 +2,12 @@
 
 .vacancies {
     @include res('margin-bottom', 100px);
+    @include media(1400){
+        @include resm('margin-bottom', 100px);
+    }   
+    @include media(576){
+        @include resa('margin-bottom', 80px);
+    }
 
     &__container {
         display: flex;
@@ -12,12 +18,22 @@
 
     .vacancies {
         &-title {
-            @include res('margin-bottom', 40px);
             font-weight: 700;
-            @include res('font-size', 56px);
-            @include res('line-height', 56px);
-            letter-spacing: -5%;
             text-align: center;
+            line-height: 140%;
+            @include res('letter-spacing', -1px);
+            @include res('margin-bottom', 40px);
+            @include res('font-size', 56px);
+            @include media(1400){
+                @include resm('margin-bottom', 40px);
+                @include resm('font-size', 48px);
+                @include resm('letter-spacing', -1px);
+            }
+            @include media(576){
+                @include resa('margin-bottom', 40px);
+                @include resa('font-size', 40px);
+                @include resa('letter-spacing', -1px);
+            }
         }
 
         &__list {

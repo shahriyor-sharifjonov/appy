@@ -1056,12 +1056,12 @@
 }
 
 .vacancies .vacancies-title {
-  margin-bottom: 2.5vw;
   font-weight: 700;
-  font-size: 3.5vw;
-  line-height: 3.5vw;
-  letter-spacing: -5%;
   text-align: center;
+  line-height: 140%;
+  letter-spacing: -0.0625vw;
+  margin-bottom: 2.5vw;
+  font-size: 3.5vw;
 }
 
 .vacancies .vacancies__list {
@@ -2178,6 +2178,16 @@ ul.transition li {
     letter-spacing: -0.09765625vw;
   }
 
+  .vacancies {
+    margin-bottom: 9.765625vw;
+  }
+
+  .vacancies .vacancies-title {
+    margin-bottom: 3.90625vw;
+    font-size: 4.6875vw;
+    letter-spacing: -0.09765625vw;
+  }
+
   .stat {
     padding-top: 9.765625vw;
     padding-bottom: 9.765625vw;
@@ -2806,7 +2816,7 @@ ul.transition li {
   }
 
   .terms .terms-title {
-    margin-bottom: 21.3333333333vw;
+    margin-bottom: 10.6666666667vw;
     font-size: 10.6666666667vw;
     letter-spacing: -0.2666666667vw;
   }
@@ -2837,6 +2847,16 @@ ul.transition li {
 
   .terms .terms__list-text {
     font-size: 4.2666666667vw;
+    letter-spacing: -0.2666666667vw;
+  }
+
+  .vacancies {
+    margin-bottom: 21.3333333333vw;
+  }
+
+  .vacancies .vacancies-title {
+    margin-bottom: 10.6666666667vw;
+    font-size: 10.6666666667vw;
     letter-spacing: -0.2666666667vw;
   }
 
