@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
     @include media(1400){
         @include resm('top', 32px);
     }
@@ -17,6 +18,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        z-index: 51;
     }
     &__left{
         display: flex;
@@ -291,6 +294,27 @@
         &-line {
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+    &__menu{
+        display: none;
+        @include media(576){
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0A0A0A;
+            z-index: 50;
+            transition: 200ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            &.open{
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }
