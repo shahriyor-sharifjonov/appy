@@ -1,0 +1,61 @@
+@import '../abstracts/mixins';
+
+.terms {
+    @include res('margin-bottom', 150px);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .terms {
+        &-title {
+            @include res('margin-bottom', 80px);
+            font-weight: 700;
+            @include res('font-size', 56px);
+            @include res('line-height', 56px);
+            letter-spacing: -5%;
+            text-align: center;
+        }
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include res('gap', 24px);
+
+            &-item {
+                @include res('max-width', 282px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &-pic {
+                @include res('width', 80px);
+                @include res('height', 80px);
+                background-color: #D6FF63;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include res('margin-bottom', 24px);
+
+                svg {
+                    @include res('width', 42px);
+                    @include res('height', 42px);
+                }
+            }
+
+            &-text {
+                font-weight: 400;
+                @include res('font-size', 20px);
+                @include res('line-height', 28px);
+                text-align: center;
+            }
+        }
+    }
+}

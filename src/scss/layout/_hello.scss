@@ -1,10 +1,72 @@
 @import '../abstracts/mixins';
-.hello{
+
+.hello {
     @include res('padding-top', 144px);
-    @include media(576){
+    @include res('margin-bottom', 150px);
+
+    @include media(576) {
         @include resa('padding-top', 80px);
     }
-    &__container{
+
+    &__container {
         background: #232324;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include res('padding', 80px);
+        @include res('border-radius', 24px);
+    }
+
+    .hello {
+        &__title {
+            font-weight: 700;
+            @include res('font-size', 56px);
+            @include res('line-height', 56px);
+            letter-spacing: -5%;
+            @include res('margin-bottom', 32px);
+            text-align: center;
+        }
+
+        &__desc {
+            font-weight: 400;
+            @include res('font-size', 20px);
+            @include res('line-height', 28px);
+            letter-spacing: -5%;
+            @include res('margin-bottom', 80px);
+            text-align: center;
+        }
+
+        &__avatars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include res('margin-bottom', 80px);
+
+            &-avatar {
+                @include res('width', 120px);
+                @include res('height', 120px);
+                background-color: rgb(211, 211, 211);
+                border-radius: 50%;
+                border: solid white;
+                @include res('border-width', 2px);
+                object-fit: cover;
+                margin-left: -30px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__btn {
+            background-color: #3A82EE;
+            @include res('border-radius', 8px);
+            @include res('padding', 16px);
+            @include res('padding-left', 32px);
+            @include res('padding-right', 32px);
+            font-weight: 700;
+            @include res('font-size', 18px);
+        }
     }
 }
