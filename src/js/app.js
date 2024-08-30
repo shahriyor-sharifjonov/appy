@@ -9,55 +9,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Swiper
-const swiper = new Swiper('.slide__swiper', {
-  loop: true,
-  modules: [Autoplay],
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-});
-
-// Function to update active class on navigation buttons
-function updateNavButtons(activeIndex) {
-  const navButtons = document.querySelectorAll('.slide__nav-btn');
-  navButtons.forEach((btn, index) => {
-      if (index === activeIndex) {
-          btn.classList.add('active');
-      } else {
-          btn.classList.remove('active');
-      }
-  });
-}
-
-// Event listener for slide change
-swiper.on('slideChange', function () {
-  updateNavButtons(swiper.realIndex);
-});
-
-// Add click event to navigation buttons
-document.querySelectorAll('.slide__nav-btn').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-      swiper.slideToLoop(index);
-      updateNavButtons(index);
-  });
-});
-
-// Initialize the correct active button on page load
-updateNavButtons(swiper.realIndex);
-
-// Add click event to navigation buttons
-document.querySelectorAll('.slide__nav-btn').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-      swiper.slideToLoop(index);
-      updateNavButtons(index);
-  });
-});
-
-// Initialize the correct active button on page load
-updateNavButtons(swiper.realIndex);
-
 if(document.querySelector('.header__lang-btn')){
     const btn = document.querySelector('.header__lang-btn');
     btn.addEventListener('click', () => {
@@ -245,6 +196,56 @@ function contentAnimation(){
   tl.from('.intro__desc', {duration: .3, translateY: 10, opacity: 0})
   tl.from('.intro__btn', {duration: .3, translateY: 10, opacity: 0})
   tl.to('.intro__img', {opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"}, "-=.5") 
+
+
+  const swiper = new Swiper('.slide__swiper', {
+    loop: true,
+    modules: [Autoplay],
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
+
+
+  // Function to update active class on navigation buttons
+  function updateNavButtons(activeIndex) {
+    const navButtons = document.querySelectorAll('.slide__nav-btn');
+    navButtons.forEach((btn, index) => {
+        if (index === activeIndex) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+  }
+
+  // Event listener for slide change
+  swiper.on('slideChange', function () {
+    updateNavButtons(swiper.realIndex);
+  });
+
+  // Add click event to navigation buttons
+  document.querySelectorAll('.slide__nav-btn').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        swiper.slideToLoop(index);
+        updateNavButtons(index);
+    });
+  });
+
+  // Initialize the correct active button on page load
+  updateNavButtons(swiper.realIndex);
+
+  // Add click event to navigation buttons
+  document.querySelectorAll('.slide__nav-btn').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        swiper.slideToLoop(index);
+        updateNavButtons(index);
+    });
+  });
+
+  // Initialize the correct active button on page load
+  updateNavButtons(swiper.realIndex);
 
   ScrollTrigger.matchMedia({
     all: function () {
