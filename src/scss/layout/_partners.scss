@@ -1,0 +1,67 @@
+@import "../abstracts/mixins";
+.partners{
+    @include res('padding-top', 150px);
+    @include res('padding-bottom', 150px);
+    @include media(1400){
+        @include resm('padding-top', 100px);
+        @include resm('padding-bottom', 100px);
+    }
+    @include media(576){
+        @include resa('padding-top', 80px);
+        @include resa('padding-bottom', 80px);
+    }
+    &__title{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: 700;
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 56px);
+        @include res('max-width', 800px);
+        @include res('margin-bottom', 40px);
+        @include media(1400){
+            @include resm('font-size', 48px);
+            @include resm('max-width', 640px);
+            @include resm('letter-spacing', -1px);
+            @include resm('margin-bottom', 40px);
+        }
+        @include media(576){
+            @include resa('font-size', 40px);
+            @include resa('max-width', 640px);
+            @include resa('letter-spacing', -1px);
+            @include resa('margin-bottom', 40px);
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include res('gap', 24px);
+        @include media(1400){
+            @include resm('gap', 24px);
+        }
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 24px);
+        }
+    }
+    &__item{
+        width: 20%;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('height', 80px);
+        @include media(1400){
+            @include resm('height', 80px);
+        }
+        @include media(576){
+            width: 100%;
+            @include resa('height', 80px);
+        }
+        svg{
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+}
