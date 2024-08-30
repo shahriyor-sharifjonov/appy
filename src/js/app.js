@@ -214,13 +214,13 @@ function contentAnimation(){
       
       const people = gsap.timeline({
         scrollTrigger: {
-          trigger: ".stat__item-title.people",
+          trigger: ".stat__item-title.people .item",
           start: "top 90%",
           markers: false,
           scrub: false,
         },
       });
-      people.from(".stat__item-title.people .item", {delay: .5, duration: .3, opacity: 0, stagger: .1})
+      people.from(".stat__item-title.people .item", {delay: .3, duration: .3, opacity: 0, stagger: .1})
     },
     "(min-width: 576px)": function () {
       const item = gsap.timeline({
