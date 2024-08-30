@@ -186,8 +186,8 @@ import barba from '@barba/core';
 
 function pageTransition() {
   var tl = gsap.timeline();
-  tl.to('ul.transition li', {duration: .5, scaleY: 1, transformOrigin: "bottom left", stagger: .2})
-  tl.to('ul.transition li', {duration: .5, scaleY: 0, transformOrigin: "bottom left", stagger: .1, delay: .3})
+  tl.to('ul.transition li', {duration: .5, scaleY: 1, opacity: 1, transformOrigin: "bottom left", stagger: 0})
+  tl.to('ul.transition li', {duration: .5, opacity: 0, transformOrigin: "bottom left", stagger: 0, delay: .5})
 }
 
 function contentAnimation(){
@@ -337,7 +337,7 @@ barba.init({
       const done = this.async();
       pageTransition();
       setMenuLinks();
-      await delay(1500);
+      await delay(900);
       done();
     },
     async enter(data) {
