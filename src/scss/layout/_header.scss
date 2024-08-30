@@ -1,0 +1,296 @@
+@import "../abstracts/mixins";
+.header{
+    position: absolute;
+    @include res('top', 32px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(1400){
+        @include resm('top', 32px);
+    }
+    @include media(576){
+        @include resa('top', 16px);
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include res('gap', 32px);
+        @include media(1400){
+            @include resm('gap', 32px);
+        }
+        @include media(576){
+            @include resa('gap', 32px);
+        }
+    }
+    &__logo{
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('width', 145.52px);
+        @include res('height', 32px);
+        @include media(1400){
+            @include resm('width', 145.52px);
+            @include resm('height', 32px);
+        }
+        @include media(576){
+            @include resa('width', 40px);
+            @include resa('height', 40px);
+        }
+        &>img{
+            width: 100%;
+            height: 100%;
+            @include media(576){
+                display: none;
+            }
+        }
+        .sm{
+            display: none;
+            width: 100%;
+            height: 100%;
+            line-height: 0;
+            align-items: center;
+            justify-content: center;
+            @include media(576){
+                display: flex;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include res('gap', 18px);
+        @include media(1400){
+            @include resm('gap', 18px);
+        }
+        @include media(576){
+            display: none;
+        }
+    }
+    &__link{
+        font-weight: 500;
+        letter-spacing: -5%;
+        line-height: 100%;
+        @include res('font-size', 16px);
+        @include media(1400){
+            @include resm('font-size', 16px);
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include res('gap', 8px);
+        @include media(1400){
+            @include resm('gap', 8px);
+        }
+        @include media(576){
+            @include resa('gap', 8px);
+        }
+    }
+    &__btn{
+        @include media(576){
+            display: none;
+        }
+    }
+    &__btn,
+    &__lang-btn{
+        color: #fff;
+        border: solid #fff;
+        line-height: 90%;
+        transition: border-color 200ms ease-out, background 200ms ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 4px);
+        @include res('font-size', 16px);
+        @include res('border-radius', 8px);
+        @include res('border-width', 1px);
+        @include res('padding-top', 9px);
+        @include res('padding-bottom', 9px);
+        @include res('padding-left', 16px);
+        @include res('padding-right', 16px);
+        @include media(1400){
+            @include resm('gap', 4px);
+            @include resm('font-size', 16px);
+            @include resm('border-radius', 8px);
+            @include resm('border-width', 1px);
+            @include resm('padding-top', 9px);
+            @include resm('padding-bottom', 9px);
+            @include resm('padding-left', 16px);
+            @include resm('padding-right', 16px);
+        }
+        @include media(576){
+            @include resa('gap', 4px);
+            @include resa('font-size', 16px);
+            @include resa('border-radius', 8px);
+            @include resa('border-width', 1px);
+            @include resa('padding-top', 9px);
+            @include resa('padding-bottom', 9px);
+            @include resa('padding-left', 16px);
+            @include resa('padding-right', 16px);
+        }
+        svg{
+            @include res('width', 8.49px);
+            @include res('height', 5.19px);
+            @include media(1400){
+                @include resm('width', 8.49px);
+                @include resm('height', 5.19px);
+            }
+            @include media(576){
+                @include resa('width', 8.49px);
+                @include resa('height', 5.19px);
+            }
+        }
+        &:hover{
+            border-color: #3A82EE;
+            background: #3A82EE;
+        }
+    }
+    &__lang{
+        position: relative;
+        &-btn{
+            &.active{
+                border-end-start-radius: 0px !important;
+                border-end-end-radius: 0px !important;
+                border-bottom: none;
+                @include res('margin-top', -1px);
+                @include media(1400){
+                    @include resm('margin-top', -1px);
+                }
+                @include media(576){
+                    @include resa('margin-top', -1px);
+                }
+                &~.header__lang-content{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &:hover{
+                border-color: #fff;
+                background: none;
+            }
+        }
+        &-content{
+            position: absolute;
+            top: 100%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: solid #fff;
+            @include res('border-end-start-radius', 8px);
+            @include res('border-end-end-radius', 8px);
+            @include res('border-width', 1px);
+            border-top: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease-out;
+            background: #0A0A0A;    
+            @include media(1400){
+                @include resm('border-end-start-radius', 8px);
+                @include resm('border-end-end-radius', 8px);
+                @include resm('border-width', 1px);
+            }
+            @include media(576){
+                @include resa('border-end-start-radius', 8px);
+                @include resa('border-end-end-radius', 8px);
+                @include resa('border-width', 1px);
+            }
+        }
+        &-item{
+            color: #fff;
+            line-height: 90%;
+            transition: 200ms ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            transition: 200ms ease-out;
+            @include res('gap', 4px);
+            @include res('font-size', 16px);
+            @include res('padding-top', 9px);
+            @include res('padding-bottom', 9px);
+            @include res('padding-left', 16px);
+            @include res('padding-right', 16px);
+            @include media(1400){
+                @include resm('gap', 4px);
+                @include resm('font-size', 16px);
+                @include resm('padding-top', 9px);
+                @include resm('padding-bottom', 9px);
+                @include resm('padding-left', 16px);
+                @include resm('padding-right', 16px);
+            }
+            @include media(576){
+                @include resa('gap', 4px);
+                @include resa('font-size', 16px);
+                @include resa('padding-top', 9px);
+                @include resa('padding-bottom', 9px);
+                @include resa('padding-left', 16px);
+                @include resa('padding-right', 16px);
+            }
+            &:hover{
+                color: #D6FF63;
+            }
+        }
+    }
+    &__button {
+        @include resa('width', 30px);
+        @include resa('height', 30px);
+        position: relative;
+        border: none;
+        outline: none;
+        background: none;
+        display: none;
+        position: relative;
+        z-index: 1001;
+        @include media(576) {
+            display: block;
+        }
+        &.open {
+            .header__button-line,
+            &::before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(135deg);
+            }
+            &::after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-135deg);
+            }
+        }
+        &::before,
+        &::after,
+        &-line {
+            transition: 0.5s;
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 100%;
+            @include resa('height', 2px);
+            background: #fff;
+        }
+        &::before {
+            top: 20%;
+        }
+        &::after {
+            bottom: 20%;
+        }
+        &-line {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

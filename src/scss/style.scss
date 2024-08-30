@@ -1,0 +1,21 @@
+// Главный Sass файл
+
+// Шрифты
+@import "fonts";
+
+// abstracts
+@import 
+    'abstracts/mixins';
+
+// vendors
+// @import 'vendors/bootstrap'
+
+// layout
+@import 
+    'layout/header',
+    'layout/intro',
+    'layout/footer';
+
+// themes
+@import 
+    'themes/theme';

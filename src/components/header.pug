@@ -1,0 +1,25 @@
+mixin header()
+    header.header 
+        .header__nav.container 
+            .header__left 
+                a(href="index.html").header__logo
+                    img(src="@img/logo.svg", alt="" draggable="false") 
+                    .sm 
+                        img(src="@img/logo-short.svg", alt="" draggable="false")
+                .header__list 
+                    a(href="#!").header__link О нас 
+                    a(href="#!").header__link CPA-сеть
+                    a(href="#!").header__link Аренда приложений
+                    a(href="#!").header__link Вакансии
+            .header__right 
+                .header__lang 
+                    button.header__lang-btn RU
+                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.75731 3.70723L8.05732 0.407227L8.99998 1.34989L4.75731 5.59256L0.514648 1.34989L1.45732 0.407227L4.75731 3.70723Z" fill="white"/>
+                        </svg>
+                    .header__lang-content 
+                        button.header__lang-item UA
+                        button.header__lang-item EN
+                a(href="#!").header__btn Написать нам
+                button.header__button 
+                    span.header__button-line
