@@ -7,6 +7,14 @@
     isolation: isolate;
     @include res('padding-top', 100px);
     @include res('padding-bottom', 100px);
+    @include media(1400){
+        @include resm('padding-top', 100px);
+        @include resm('padding-bottom', 100px);
+    }
+    @include media(576){
+        @include resa('padding-top', 52px);
+        @include resa('padding-bottom', 52px);
+    }
     &::before{
         content: "";
         position: absolute;
@@ -20,6 +28,16 @@
         @include res('bottom', -970px);
         @include res('width', 1495px);
         @include res('height', 1495px);
+        @include media(1400){
+            @include resm('bottom', -970px);
+            @include resm('width', 1495px);
+            @include resm('height', 1495px);
+        }
+        @include media(576){
+            @include resa('bottom', -970px);
+            @include resa('width', 1495px);
+            @include resa('height', 1495px);
+        }
     }
     &__title{
         text-align: center;
@@ -48,16 +66,16 @@
         text-align: center;
         @include res('letter-spacing', -1px);
         @include res('font-size', 20px);
-        @include res('margin-bottom', 80px);
+        @include res('margin-bottom', 24px);
         @include media(1400){
             @include resm('letter-spacing', -1px);
             @include resm('font-size', 20px);
-            @include resm('margin-bottom', 80px);
+            @include resm('margin-bottom', 24px);
         }
         @include media(576){
             @include resa('letter-spacing', -1px);
             @include resa('font-size', 16px);
-            @include resa('margin-bottom', 40px);
+            @include resa('margin-bottom', 24px);
         }
     }
     &__nav{
@@ -66,6 +84,21 @@
         justify-content: center;
         @include res('gap', 8px);
         @include res('margin-bottom', 24px);
+        @include media(1400){
+            @include resm('gap', 8px);
+            @include resm('margin-bottom', 24px);
+        }
+        @include media(576){
+            justify-content: flex-start;
+            overflow-x: auto;
+            @include resa('min-width', 375px);
+            @include resa('margin-left', -16px);
+            @include resa('margin-right', -16px);
+            @include resa('padding-left', 16px);
+            @include resa('padding-right', 16px);
+            @include resa('gap', 8px);
+            @include resa('margin-bottom', 24px);
+        }
         &-btn{
             color: #fff;
             border: solid #fff;
@@ -76,6 +109,28 @@
             @include res('padding-bottom', 10px);
             @include res('padding-left', 24px);
             @include res('padding-right', 24px);
+            @include res('font-size', 16px);
+            @include res('letter-spacing', -1px);
+            @include media(1400){
+                @include resm('border-radius', 100px);
+                @include resm('border-width', 1px);
+                @include resm('padding-top', 10px);
+                @include resm('padding-bottom', 10px);
+                @include resm('padding-left', 24px);
+                @include resm('padding-right', 24px);
+                @include resm('font-size', 16px);
+                @include resm('letter-spacing', -1px);
+            }
+            @include media(576){
+                @include resa('border-radius', 100px);
+                @include resa('border-width', 1px);
+                @include resa('padding-top', 10px);
+                @include resa('padding-bottom', 10px);
+                @include resa('padding-left', 24px);
+                @include resa('padding-right', 24px);
+                @include resa('font-size', 16px);
+                @include resa('letter-spacing', -1px);
+            }
             &.active{
                 background: #3A82EE;
                 border-color: #3A82EE;
@@ -87,6 +142,12 @@
         margin-left: auto;
         margin-right: auto;
         @include res('width', 792px);
+        @include media(1400){
+            @include resm('width', 792px);
+        }
+        @include media(576){
+            @include resa('width', 287px);
+        }
     }
     &__swiper{
         width: 100%;
@@ -99,8 +160,19 @@
     &__item{
         opacity: 0;
         transition: opacity 200ms ease-out;
+        @include media(576){
+            &>img{
+                display: none;
+            }
+        }
         &.swiper-slide-active{
             opacity: 1;
+        }
+        .sm{
+            display: none;
+            @include media(576){
+                display: block;
+            }
         }
         img{
             width: 100%;
