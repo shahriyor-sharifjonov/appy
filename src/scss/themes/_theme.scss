@@ -40,7 +40,7 @@ ul{
     list-style-type: none;
 }
 .container{
-    @include res('width', 1400px);
+    @include res('width', 1201px);
     margin-left: auto;
     margin-right: auto;
     @include media(1400){
