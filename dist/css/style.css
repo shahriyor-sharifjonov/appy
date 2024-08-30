@@ -967,12 +967,12 @@
 }
 
 .terms .terms-title {
-  margin-bottom: 5vw;
   font-weight: 700;
-  font-size: 3.5vw;
-  line-height: 3.5vw;
-  letter-spacing: -5%;
   text-align: center;
+  line-height: 140%;
+  letter-spacing: -0.0625vw;
+  margin-bottom: 5vw;
+  font-size: 3.5vw;
 }
 
 .terms .terms__list {
@@ -1006,8 +1006,6 @@
 }
 
 .terms .terms__list-pic {
-  width: 5vw;
-  height: 5vw;
   background-color: #D6FF63;
   border-radius: 50%;
   display: -webkit-box;
@@ -1019,6 +1017,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 5vw;
+  height: 5vw;
   margin-bottom: 1.5vw;
 }
 
@@ -1030,7 +1030,8 @@
 .terms .terms__list-text {
   font-weight: 400;
   font-size: 1.25vw;
-  line-height: 1.75vw;
+  letter-spacing: -0.0625vw;
+  line-height: 140%;
   text-align: center;
 }
 
@@ -2143,6 +2144,40 @@ ul.transition li {
     margin-top: 0.78125vw;
   }
 
+  .terms {
+    margin-bottom: 9.765625vw;
+  }
+
+  .terms .terms-title {
+    margin-bottom: 7.8125vw;
+    font-size: 4.6875vw;
+    letter-spacing: -0.09765625vw;
+  }
+
+  .terms .terms__list {
+    gap: 2.34375vw;
+  }
+
+  .terms .terms__list-item {
+    max-width: 22.0703125vw;
+  }
+
+  .terms .terms__list-pic {
+    width: 7.8125vw;
+    height: 7.8125vw;
+    margin-bottom: 2.34375vw;
+  }
+
+  .terms .terms__list-pic svg {
+    width: 4.1015625vw;
+    height: 4.1015625vw;
+  }
+
+  .terms .terms__list-text {
+    font-size: 1.953125vw;
+    letter-spacing: -0.09765625vw;
+  }
+
   .stat {
     padding-top: 9.765625vw;
     padding-bottom: 9.765625vw;
@@ -2621,7 +2656,7 @@ ul.transition li {
 
   .hello {
     padding-top: 21.3333333333vw;
-    margin-bottom: 7.8125vw;
+    margin-bottom: 21.3333333333vw;
   }
 
   .hello__container {
@@ -2764,6 +2799,45 @@ ul.transition li {
   .form__agreement {
     font-size: 3.7333333333vw;
     margin-top: 2.1333333333vw;
+  }
+
+  .terms {
+    margin-bottom: 21.3333333333vw;
+  }
+
+  .terms .terms-title {
+    margin-bottom: 21.3333333333vw;
+    font-size: 10.6666666667vw;
+    letter-spacing: -0.2666666667vw;
+  }
+
+  .terms .terms__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6.4vw;
+  }
+
+  .terms .terms__list-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .terms .terms__list-pic {
+    width: 21.3333333333vw;
+    height: 21.3333333333vw;
+    margin-bottom: 6.4vw;
+  }
+
+  .terms .terms__list-pic svg {
+    width: 11.2vw;
+    height: 11.2vw;
+  }
+
+  .terms .terms__list-text {
+    font-size: 4.2666666667vw;
+    letter-spacing: -0.2666666667vw;
   }
 
   .stat {

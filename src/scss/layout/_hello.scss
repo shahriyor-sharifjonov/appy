@@ -9,7 +9,7 @@
     }
     @include media(576) {
         @include resa('padding-top', 80px);
-        @include resm('margin-bottom', 80px);
+        @include resa('margin-bottom', 80px);
     }
 
     &__container {
