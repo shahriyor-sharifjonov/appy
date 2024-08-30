@@ -82,3 +82,19 @@ ul{
         opacity: .5;
     }
 }
+ul.transition{
+    display: flex;
+    position: absolute;
+    z-index: 99999999;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+}
+ul.transition li{
+    transform: scaleY(0);
+    background: #0A0A0A;
+    width: 20%;
+}

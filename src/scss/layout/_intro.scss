@@ -10,8 +10,8 @@
     @include res('min-height', 800px);
     @include media(1400){
         @include resm('padding-top', 170px);
-        @include resm('padding-bottom', 170px);
-        @include resm('min-height', 800px);
+        @include resm('padding-bottom', 100px);
+        @include resm('min-height', 650px);
     }
     @include media(576){
         @include resa('padding-top', 80px);
@@ -40,6 +40,7 @@
     }
     &__title{
         display: flex;
+        overflow: hidden;
         flex-direction: column;
         @include res('margin-bottom', 55px);
         @include media(1400){
@@ -50,19 +51,25 @@
             align-items: center;
             margin-bottom: 0;
         }
-        span{
-            letter-spacing: -5%;
-            font-weight: 700;
-            line-height: 100%;
-            @include res('font-size', 64px);
-            @include media(1400){
-                @include resm('font-size', 56px);
-            }
-            @include media(576){
-                @include resa('font-size', 48px);
-            }
+        .line{
+            overflow: hidden;
+            position: relative;
+            @include res('height', 70px);
             &.active{
                 color: #D6FF63;
+            }
+            span{
+                display: block;
+                letter-spacing: -5%;
+                font-weight: 700;
+                line-height: 100%;
+                @include res('font-size', 64px);
+                @include media(1400){
+                    @include resm('font-size', 56px);
+                }
+                @include media(576){
+                    @include resa('font-size', 48px);
+                }
             }
         }
     }
@@ -99,7 +106,7 @@
         font-weight: 700;
         line-height: 90%;
         letter-spacing: -5%;
-        transition: 200ms ease-out;
+        transition: box-shadow 200ms ease-out;
         &:hover{
             box-shadow: 0 0 30px #3A82EE;
         }
@@ -126,6 +133,7 @@
         position: relative;
         line-height: 0;
         isolation: isolate;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         @include res('width', 588px);
         @include media(1400){
             @include resm('width', 476px);

@@ -2,6 +2,10 @@
     background: #0A0A0A;
     @include res('padding-top', 40px);
     @include res('padding-bottom', 40px);
+    @include media(1400){
+        @include resm('padding-top', 40px);
+        @include resm('padding-bottom', 40px);
+    }
     &__body{
         display: flex;
         flex-direction: column;
@@ -13,15 +17,29 @@
         border-bottom: solid #2C2D2E;
         @include res('padding-bottom', 16px);
         @include res('margin-bottom', 16px);
+        @include media(1400){
+            @include resm('padding-bottom', 16px);
+            @include resm('margin-bottom', 16px);
+        }
     }
     &__content{
         display: flex;
         align-items: center;
         justify-content: flex-start;
         @include res('gap', 33px);
+        @include media(1400){
+            @include resm('gap', 33px);
+        }
     }
     &__logo{
-        @include res('height', 20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        @include res('height', 20px);   
+        @include media(1400){
+            @include resm('height', 20px);   
+        }
         svg{
             height: 100%;
             width: 100%;
@@ -32,24 +50,41 @@
         align-items: center;
         justify-content: flex-start;
         @include res('gap', 18px);
+        @include media(1400){
+            @include resm('gap', 18px);
+        }
     }
     &__link{
         font-weight: 500;
         letter-spacing: -5%;
         line-height: 90%;
         @include res('font-size', 16px);
+        @include media(1400){
+            @include resm('font-size', 16px);
+        }
     }
     &__soc{
         display: flex;
         align-items: center;
         justify-content: flex-end;
         @include res('gap', 8px);
+        @include media(1400){
+            @include resm('gap', 8px);
+        }
         &-item{
             display: flex;
             align-items: center;
             justify-content: center;
             @include res('width', 24px);
             @include res('height', 24px);
+            @include media(1400){
+                @include resm('width', 24px);
+                @include resm('height', 24px);
+            }
+            svg, img{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     &__bot{
@@ -62,6 +97,9 @@
         line-height: 90%;
         letter-spacing: -5%;
         @include res('font-size', 12px);
+        @include media(1400){
+            @include resm('font-size', 12px);
+        }
     }
     &__privacy{
         font-weight: 600;
@@ -70,6 +108,9 @@
         color: #5D5F61;
         transition: color 200ms ease-out;
         @include res('font-size', 12px);
+        @include media(1400){
+            @include resm('font-size', 12px);
+        }
         &:hover{
             color: #fff;
         }

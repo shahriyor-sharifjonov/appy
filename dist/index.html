@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240830110258">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240830112541">
     <title>Document</title>
   </head>
-  <body>   
+  <body data-barba="wrapper">
+    <ul class="transition"> 
+      <li> </li>
+      <li> </li>
+      <li> </li>
+      <li> </li>
+      <li> </li>
+    </ul>
     <div class="fixed"></div>
     <div class="wrapper"> 
             <header class="header"> 
@@ -46,11 +53,15 @@
                 </div>
               </div>
             </header>
-      <main class="main"> 
+      <main class="main" data-barba="container" data-barba-namespace="home"> 
                 <section class="intro" id="intro"> 
                   <div class="intro__body container"> 
                     <div class="intro__content"> 
-                      <p class="intro__title"> <span>Заряжаем </span><span>ваш бизнес </span><span class="active">успехом </span></p>
+                      <div class="intro__title"> 
+                        <div class="line"> <span>Заряжаем </span></div>
+                        <div class="line"> <span>ваш бизнес </span></div>
+                        <div class="line active"> <span class="active">успехом </span></div>
+                      </div>
                       <p class="intro__desc">Медиабаинг, c которым выгодно работать </p><a class="intro__btn hover" href="#!">Стать партнёром </a>
                     </div>
                     <div class="intro__img"> <img src="img/energy.png" alt="" draggable="false">
@@ -99,6 +110,6 @@
               </div>
             </footer>
     </div>
-    <script src="js/app.min.js?_v=20240830110258"> </script>
+    <script src="js/app.min.js?_v=20240830112541"> </script>
   </body>
 </html>
