@@ -195,10 +195,10 @@ function pageTransition() {
 
 function contentAnimation(){
   var tl = gsap.timeline();
-  tl.from(".intro__title .line span", 1, {y: 120, ease: "power1.out", delay: 1, skewY: 17, stagger: {amount: 0}}, "-=1.1")
-  tl.from('.intro__desc', {duration: .8, translateY: 10, opacity: 0})
-  tl.from('.intro__btn', {duration: .8, translateY: 10, opacity: 0})
-  tl.to('.intro__img', {clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"}, "-=1.1") 
+  tl.from(".intro__title .line span", .6, {y: 120, ease: "power1.out", delay: 1, skewY: 17, stagger: {amount: 0}}, "-=1.1")
+  tl.from('.intro__desc', {duration: .3, translateY: 10, opacity: 0})
+  tl.from('.intro__btn', {duration: .3, translateY: 10, opacity: 0})
+  tl.to('.intro__img', {opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"}, "-=.5") 
 }
 
 function setMenuLinks() {
@@ -277,6 +277,16 @@ barba.init({
         },
       });
       people.from(".stat__item-title.people .item", {duration: .3, opacity: 0, stagger: .1})
+
+      const item = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      item.from(".stat__item", {duration: .3, opacity: 0, y: 20, stagger: .1})
     },
     "(min-width: 576px)": function () {
       

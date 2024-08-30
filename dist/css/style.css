@@ -499,6 +499,7 @@
   position: relative;
   line-height: 0;
   isolation: isolate;
+  opacity: 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   width: 36.75vw;

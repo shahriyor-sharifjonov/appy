@@ -139,6 +139,7 @@
         position: relative;
         line-height: 0;
         isolation: isolate;
+        opacity: 0;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         @include res('width', 588px);
         @include media(1400){
