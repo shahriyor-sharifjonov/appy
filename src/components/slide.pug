@@ -1,0 +1,21 @@
+mixin slide()
+    section.slide 
+        .slide__container.container 
+            h2.slide__title Любые объемы качественного трафика
+            p.slide__p Профессионально работаем с популярными вертикалями и источниками
+            .slide__nav 
+                button.slide__nav-btn.active.hover Gambling
+                button.slide__nav-btn.hover Betting
+                button.slide__nav-btn.hover Crypto
+                button.slide__nav-btn.hover Other
+            .slide__carousel 
+                .slide__swiper.swiper
+                    .swiper-wrapper.slide__wrapper
+                        .swiper-slide.slide__item 
+                            img(src="@img/slide-1.png", alt="" draggable="false")
+                        .swiper-slide.slide__item 
+                            img(src="@img/slide-2.png", alt="" draggable="false")
+                        .swiper-slide.slide__item 
+                            img(src="@img/slide-3.png", alt="" draggable="false")
+                        .swiper-slide.slide__item 
+                            img(src="@img/slide-4.png", alt="" draggable="false")

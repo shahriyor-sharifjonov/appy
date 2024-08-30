@@ -1,0 +1,109 @@
+@import '../abstracts/mixins';
+.slide{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #0A0A0A;
+    isolation: isolate;
+    @include res('padding-top', 100px);
+    @include res('padding-bottom', 100px);
+    &::before{
+        content: "";
+        position: absolute;
+        background: #D6FF63;
+        filter: blur(400px);
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        opacity: 15%;
+        @include res('bottom', -970px);
+        @include res('width', 1495px);
+        @include res('height', 1495px);
+    }
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('letter-spacing', 1px);
+        @include res('font-size', 56px);
+        @include res('max-width', 800px);
+        @include res('margin-bottom', 24px);
+        @include media(1400){
+            @include resm('font-size', 48px);
+            @include resm('max-width', 640px);
+            @include resm('letter-spacing', -1px);
+            @include resm('margin-bottom', 24px);
+        }
+        @include media(576){
+            @include resa('font-size', 40px);
+            @include resa('max-width', 640px);
+            @include resa('letter-spacing', -1px);
+            @include resa('margin-bottom', 24px);
+        }
+    }
+    &__p{
+        line-height: 140%;
+        text-align: center;
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 20px);
+        @include res('margin-bottom', 80px);
+        @include media(1400){
+            @include resm('letter-spacing', -1px);
+            @include resm('font-size', 20px);
+            @include resm('margin-bottom', 80px);
+        }
+        @include media(576){
+            @include resa('letter-spacing', -1px);
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 40px);
+        }
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 8px);
+        @include res('margin-bottom', 24px);
+        &-btn{
+            color: #fff;
+            border: solid #fff;
+            transition: background 200ms ease-out, border-color 200ms ease-out;
+            @include res('border-radius', 100px);
+            @include res('border-width', 1px);
+            @include res('padding-top', 10px);
+            @include res('padding-bottom', 10px);
+            @include res('padding-left', 24px);
+            @include res('padding-right', 24px);
+            &.active{
+                background: #3A82EE;
+                border-color: #3A82EE;
+            }
+        }
+    }
+    &__carousel{
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('width', 792px);
+    }
+    &__swiper{
+        width: 100%;
+        overflow: hidden;
+    }
+    &__wrapper{
+        display: flex;
+        width: max-content;
+    }
+    &__item{
+        opacity: 0;
+        transition: opacity 200ms ease-out;
+        &.swiper-slide-active{
+            opacity: 1;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
