@@ -623,6 +623,7 @@
 
 .stat__p {
   line-height: 140%;
+  text-align: center;
   letter-spacing: -0.0625vw;
   font-size: 1.25vw;
   margin-bottom: 5vw;
@@ -691,7 +692,7 @@
 
 .stat__item-title {
   font-weight: 600;
-  letter-spacing: -5%;
+  letter-spacing: -0.0625vw;
   font-size: 3.5vw;
 }
 
@@ -1235,6 +1236,11 @@ ul.transition li {
     width: 46.484375vw;
   }
 
+  .stat__item-title {
+    letter-spacing: -0.09765625vw;
+    font-size: 5.46875vw;
+  }
+
   .stat__item-title.icon {
     width: 5.46875vw;
     height: 5.46875vw;
@@ -1538,6 +1544,78 @@ ul.transition li {
 
   .hello {
     padding-top: 21.3333333333vw;
+  }
+
+  .stat {
+    padding-top: 21.3333333333vw;
+    padding-bottom: 21.3333333333vw;
+  }
+
+  .stat__title {
+    font-size: 10.6666666667vw;
+    max-width: 170.6666666667vw;
+    letter-spacing: -0.2666666667vw;
+    margin-bottom: 6.4vw;
+  }
+
+  .stat__p {
+    letter-spacing: -0.2666666667vw;
+    font-size: 4.2666666667vw;
+    margin-bottom: 10.6666666667vw;
+  }
+
+  .stat__content {
+    gap: 4.2666666667vw;
+  }
+
+  .stat__item {
+    width: 100%;
+    min-height: 53.3333333333vw;
+    border-radius: 6.4vw;
+    padding: 6.4vw;
+  }
+
+  .stat__item.big {
+    width: 100%;
+  }
+
+  .stat__item-title {
+    letter-spacing: -0.2666666667vw;
+    font-size: 14.9333333333vw;
+    margin-bottom: 2.1333333333vw;
+  }
+
+  .stat__item-title.icon {
+    width: 14.9333333333vw;
+    height: 14.9333333333vw;
+  }
+
+  .stat__item-title.people .item {
+    width: 14.9333333333vw;
+    height: 14.9333333333vw;
+  }
+
+  .stat__item-title.people .item:not(:first-of-type) {
+    margin-left: -5.3333333333vw;
+  }
+
+  .stat__item-content {
+    position: static;
+    width: 78.6666666667vw;
+    height: 53.8666666667vw;
+    margin-top: 6.4vw;
+  }
+
+  .stat__item-desc {
+    letter-spacing: -0.1333333333vw;
+    font-size: 6.4vw;
+  }
+
+  .stat__item-link {
+    width: 12.8vw;
+    height: 12.8vw;
+    top: 6.4vw;
+    right: 6.4vw;
   }
 
   .footer {

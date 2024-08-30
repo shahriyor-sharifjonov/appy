@@ -6,6 +6,10 @@
         @include resm('padding-top', 100px);
         @include resm('padding-bottom', 100px);
     }
+    @include media(576){
+        @include resa('padding-top', 80px);
+        @include resa('padding-bottom', 80px);
+    }
     &__container{
         display: flex;
         flex-direction: column;
@@ -25,9 +29,16 @@
             @include resm('letter-spacing', -1px);
             @include resm('margin-bottom', 24px);
         }
+        @include media(576){
+            @include resa('font-size', 40px);
+            @include resa('max-width', 640px);
+            @include resa('letter-spacing', -1px);
+            @include resa('margin-bottom', 24px);
+        }
     }
     &__p{
         line-height: 140%;
+        text-align: center;
         @include res('letter-spacing', -1px);
         @include res('font-size', 20px);
         @include res('margin-bottom', 80px);
@@ -36,6 +47,11 @@
             @include resm('font-size', 20px);
             @include resm('margin-bottom', 80px);
         }
+        @include media(576){
+            @include resa('letter-spacing', -1px);
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 40px);
+        }
     }
     &__content{
         display: flex;
@@ -43,6 +59,9 @@
         @include res('gap', 24px);
         @include media(1400){
             @include resm('gap', 24px);
+        }
+        @include media(576){
+            @include resa('gap', 16px);
         }
     }
     &__item{
@@ -61,6 +80,12 @@
             @include resm('min-height', 250px);
             @include resm('border-radius', 24px);
             @include resm('padding', 24px);
+        }
+        @include media(576){
+            width: 100%;
+            @include resa('min-height', 200px);
+            @include resa('border-radius', 24px);
+            @include resa('padding', 24px);
         }
         &.white{
             background: #FFFFFF;
@@ -87,11 +112,23 @@
             @include media(1400){
                 @include resm('width', 476px);
             }
+            @include media(576){
+                width: 100%;
+            }
         }
         &-title{
             font-weight: 600;
-            letter-spacing: -5%;
+            @include res('letter-spacing', -1px);
             @include res('font-size', 56px);
+            @include media(1400){
+                @include resm('letter-spacing', -1px);
+                @include resm('font-size', 56px);
+            }
+            @include media(576){
+                @include resa('letter-spacing', -1px);
+                @include resa('font-size', 56px);
+                @include resa('margin-bottom', 8px);
+            }
             &.icon{
                 line-height: 0;
                 display: flex;
@@ -102,6 +139,10 @@
                 @include media(1400){
                     @include resm('width', 56px);
                     @include resm('height', 56px);
+                }
+                @include media(576){
+                    @include resa('width', 56px);
+                    @include resa('height', 56px);
                 }
                 svg{
                     width: 100%;
@@ -123,10 +164,17 @@
                         @include resm('width', 56px);
                         @include resm('height', 56px);
                     }
+                    @include media(576){
+                        @include resa('width', 56px);
+                        @include resa('height', 56px);
+                    }
                     &:not(:first-of-type){
                         @include res('margin-left', -20px);
                         @include media(1400){
                             @include resm('margin-left', -20px);
+                        }
+                        @include media(576){
+                            @include resa('margin-left', -20px);
                         }
                     }
                     &:nth-of-type(1) {
@@ -166,6 +214,12 @@
                 @include resm('width', 220px);
                 @include resm('height', 202px);
             }
+            @include media(576){
+                position: static;
+                @include resa('width', 295px);
+                @include resa('height', 202px);
+                @include resa('margin-top', 24px);
+            }
             svg{
                 width: 100%;
                 height: 100%;
@@ -179,6 +233,10 @@
             @include media(1400){
                 @include resm('letter-spacing', -0.5px);
                 @include resm('font-size', 24px);
+            }
+            @include media(576){
+                @include resa('letter-spacing', -0.5px);
+                @include resa('font-size', 24px);
             }
         }
         &-link{
@@ -196,6 +254,12 @@
                 @include resm('height', 48px);
                 @include resm('top', 24px);
                 @include resm('right', 24px);
+            }
+            @include media(576){
+                @include resa('width', 48px);
+                @include resa('height', 48px);
+                @include resa('top', 24px);
+                @include resa('right', 24px);
             }
             svg{
                 width: 100%;
