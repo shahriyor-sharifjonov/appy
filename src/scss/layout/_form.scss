@@ -114,10 +114,9 @@
         color: white;
         @include res('font-size', 18px);
         cursor: pointer;
-        transition: background 200ms;
-
+        transition: box-shadow 200ms;
         &:hover {
-            background: #3478ffa2;
+            box-shadow: 0 0 30px #3A82EE;
         }
     }
 

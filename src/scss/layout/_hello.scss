@@ -67,6 +67,10 @@
             @include res('padding-right', 32px);
             font-weight: 700;
             @include res('font-size', 18px);
+            transition: box-shadow 200ms;
+            &:hover {
+                box-shadow: 0 0 30px #3A82EE;
+            }
         }
     }
 }

@@ -747,6 +747,16 @@
   padding-right: 2vw;
   font-weight: 700;
   font-size: 1.125vw;
+  -webkit-transition: -webkit-box-shadow 200ms;
+  transition: -webkit-box-shadow 200ms;
+  -o-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  transition: box-shadow 200ms, -webkit-box-shadow 200ms;
+}
+
+.hello .hello__btn:hover {
+  -webkit-box-shadow: 0 0 30px #3A82EE;
+          box-shadow: 0 0 30px #3A82EE;
 }
 
 .form {
@@ -891,13 +901,16 @@
   color: white;
   font-size: 1.125vw;
   cursor: pointer;
-  -webkit-transition: background 200ms;
-  -o-transition: background 200ms;
-  transition: background 200ms;
+  -webkit-transition: -webkit-box-shadow 200ms;
+  transition: -webkit-box-shadow 200ms;
+  -o-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  transition: box-shadow 200ms, -webkit-box-shadow 200ms;
 }
 
 .form__submit:hover {
-  background: #3478ffa2;
+  -webkit-box-shadow: 0 0 30px #3A82EE;
+          box-shadow: 0 0 30px #3A82EE;
 }
 
 .form__agreement {
