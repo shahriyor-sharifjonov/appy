@@ -777,7 +777,7 @@
 .stat__title {
   text-align: center;
   font-weight: 700;
-  letter-spacing: 0.0625vw;
+  letter-spacing: -0.0625vw;
   font-size: 3.5vw;
   max-width: 50vw;
   margin-bottom: 1.5vw;
@@ -1013,7 +1013,7 @@
   font-weight: 700;
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 0.0625vw;
+  letter-spacing: -0.0625vw;
   font-size: 3.5vw;
   max-width: 50vw;
   margin-bottom: 1.5vw;
@@ -1100,6 +1100,100 @@
 
 .slide__item img {
   width: 100%;
+}
+
+.services {
+  padding-top: 9.375vw;
+  padding-bottom: 9.375vw;
+}
+
+.services__title {
+  text-align: center;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.0625vw;
+  font-size: 3.5vw;
+  max-width: 50vw;
+  margin-bottom: 1.5vw;
+}
+
+.services__p {
+  line-height: 140%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.0625vw;
+  font-size: 1.25vw;
+  margin-bottom: 5vw;
+}
+
+.services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5vw;
+}
+
+.services__item {
+  position: relative;
+  background: #2C2D2E;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 18.75vw;
+  padding: 1.5vw;
+  border-radius: 1.5vw;
+}
+
+.services__item > svg {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+.services__item-img {
+  line-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 3vw;
+}
+
+.services__item-img img {
+  height: 100%;
+}
+
+.services__item-p {
+  color: #909499;
+  line-height: 140%;
+  letter-spacing: -0.0625vw;
+  font-size: 1.25vw;
 }
 
 .footer {
@@ -1604,6 +1698,50 @@ ul.transition li {
     width: 77.34375vw;
   }
 
+  .services {
+    padding-top: 9.765625vw;
+    padding-bottom: 9.765625vw;
+  }
+
+  .services__title {
+    font-size: 4.6875vw;
+    max-width: 62.5vw;
+    letter-spacing: -0.09765625vw;
+    margin-bottom: 2.34375vw;
+  }
+
+  .services__p {
+    letter-spacing: -0.09765625vw;
+    font-size: 1.953125vw;
+    margin-bottom: 7.8125vw;
+  }
+
+  .services__content {
+    gap: 2.34375vw;
+  }
+
+  .services__item {
+    height: 29.296875vw;
+    padding: 2.34375vw;
+    border-radius: 2.34375vw;
+  }
+
+  .services__item > svg {
+    top: 2.34375vw;
+    right: 2.34375vw;
+    width: 4.6875vw;
+    height: 4.6875vw;
+  }
+
+  .services__item-img {
+    height: 4.6875vw;
+  }
+
+  .services__item-p {
+    letter-spacing: -0.09765625vw;
+    font-size: 1.953125vw;
+  }
+
   .footer {
     padding-top: 3.90625vw;
     padding-bottom: 3.90625vw;
@@ -2010,6 +2148,55 @@ ul.transition li {
 
   .slide__item .sm {
     display: block;
+  }
+
+  .services {
+    padding-top: 21.3333333333vw;
+    padding-bottom: 21.3333333333vw;
+  }
+
+  .services__title {
+    font-size: 10.6666666667vw;
+    max-width: 170.6666666667vw;
+    letter-spacing: -0.2666666667vw;
+    margin-bottom: 6.4vw;
+  }
+
+  .services__p {
+    letter-spacing: -0.2666666667vw;
+    font-size: 4.2666666667vw;
+    margin-bottom: 10.6666666667vw;
+  }
+
+  .services__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6.4vw;
+  }
+
+  .services__item {
+    width: 100%;
+    height: 80vw;
+    padding: 6.4vw;
+    border-radius: 6.4vw;
+  }
+
+  .services__item > svg {
+    top: 5.3333333333vw;
+    right: 6.4vw;
+    width: 11.7333333333vw;
+    height: 11.7333333333vw;
+  }
+
+  .services__item-img {
+    height: 9.3333333333vw;
+  }
+
+  .services__item-p {
+    letter-spacing: -0.2666666667vw;
+    font-size: 5.3333333333vw;
   }
 
   .footer {

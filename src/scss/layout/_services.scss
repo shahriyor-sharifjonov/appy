@@ -1,0 +1,139 @@
+@import '../abstracts/mixins';
+.services{
+    @include res('padding-top', 150px);
+    @include res('padding-bottom', 150px);
+    @include media(1400){
+        @include resm('padding-top', 100px);
+        @include resm('padding-bottom', 100px);
+    }
+    @include media(576){
+        @include resa('padding-top', 80px);
+        @include resa('padding-bottom', 80px);
+    }
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 56px);
+        @include res('max-width', 800px);
+        @include res('margin-bottom', 24px);
+        @include media(1400){
+            @include resm('font-size', 48px);
+            @include resm('max-width', 640px);
+            @include resm('letter-spacing', -1px);
+            @include resm('margin-bottom', 24px);
+        }
+        @include media(576){
+            @include resa('font-size', 40px);
+            @include resa('max-width', 640px);
+            @include resa('letter-spacing', -1px);
+            @include resa('margin-bottom', 24px);
+        }
+    }
+    &__p{
+        line-height: 140%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 20px);
+        @include res('margin-bottom', 80px);
+        @include media(1400){
+            @include resm('letter-spacing', -1px);
+            @include resm('font-size', 20px);
+            @include resm('margin-bottom', 80px);
+        }
+        @include media(576){
+            @include resa('letter-spacing', -1px);
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 40px);
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        @include res('gap', 24px);
+        @include media(1400){
+            @include resm('gap', 24px);
+        }
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 24px);
+        }
+    }
+    &__item{
+        position: relative;
+        background: #2C2D2E;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include res('height', 300px);
+        @include res('padding', 24px);
+        @include res('border-radius', 24px);
+        @include media(1400){
+            @include resm('height', 300px);
+            @include resm('padding', 24px);
+            @include resm('border-radius', 24px);
+        }
+        @include media(576){
+            width: 100%;
+            @include resa('height', 300px);
+            @include resa('padding', 24px);
+            @include resa('border-radius', 24px);
+        }
+        &>svg{
+            position: absolute;
+            @include res('top', 24px);
+            @include res('right', 24px);
+            @include res('width', 48px);
+            @include res('height', 48px);
+            @include media(1400){
+                @include resm('top', 24px);
+                @include resm('right', 24px);
+                @include resm('width', 48px);
+                @include resm('height', 48px);
+            }
+            @include media(576){
+                @include resa('top', 20px);
+                @include resa('right', 24px);
+                @include resa('width', 44px);
+                @include resa('height', 44px);
+            }
+        }
+        &-img{
+            line-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            @include res('height', 48px);
+            @include media(1400){
+                @include resm('height', 48px);
+            }
+            @include media(576){
+                @include resa('height', 35px);
+            }
+            img{
+                height: 100%;
+            }
+        }
+        &-p{
+            color: #909499;
+            line-height: 140%;
+            @include res('letter-spacing', -1px);
+            @include res('font-size', 20px);
+            @include media(1400){
+                @include resm('letter-spacing', -1px);
+                @include resm('font-size', 20px);
+            }
+            @include media(576){
+                @include resa('letter-spacing', -1px);
+                @include resa('font-size', 20px);
+            }
+        }
+    }
+}

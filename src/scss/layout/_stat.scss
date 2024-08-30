@@ -19,7 +19,7 @@
     &__title{
         text-align: center;
         font-weight: 700;
-        @include res('letter-spacing', 1px);
+        @include res('letter-spacing', -1px);
         @include res('font-size', 56px);
         @include res('max-width', 800px);
         @include res('margin-bottom', 24px);
