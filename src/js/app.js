@@ -276,8 +276,9 @@ barba.init({
           scrub: false,
         },
       });
-      people.from(".stat__item-title.people .item", {duration: .3, opacity: 0, stagger: .1})
-
+      people.from(".stat__item-title.people .item", {delay: .6, duration: .3, opacity: 0, stagger: .1})
+    },
+    "(min-width: 576px)": function () {
       const item = gsap.timeline({
         scrollTrigger: {
           trigger: ".stat__item",
@@ -288,11 +289,18 @@ barba.init({
       });
       item.from(".stat__item", {duration: .3, opacity: 0, y: 20, stagger: .1})
     },
-    "(min-width: 576px)": function () {
-      
-    },
     "(max-width: 576px)": function () {
-      
+      gsap.utils.toArray(".stat__item").forEach(el => {
+        const item = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            markers: false,
+            scrub: false,
+          },
+        });
+        item.to(el, {duration: .3, opacity: 1, y: 0, stagger: .1})
+      })
     },
   });
 })();

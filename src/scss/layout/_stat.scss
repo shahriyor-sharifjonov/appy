@@ -83,6 +83,8 @@
         }
         @include media(576){
             width: 100%;
+            transform: translateY(20px);
+            opacity: 0;
             @include resa('min-height', 200px);
             @include resa('border-radius', 24px);
             @include resa('padding', 24px);

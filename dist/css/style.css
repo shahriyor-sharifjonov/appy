@@ -1572,6 +1572,10 @@ ul.transition li {
 
   .stat__item {
     width: 100%;
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
     min-height: 53.3333333333vw;
     border-radius: 6.4vw;
     padding: 6.4vw;
