@@ -199,6 +199,54 @@ function contentAnimation(){
   tl.from('.intro__desc', {duration: .3, translateY: 10, opacity: 0})
   tl.from('.intro__btn', {duration: .3, translateY: 10, opacity: 0})
   tl.to('.intro__img', {opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"}, "-=.5") 
+
+  ScrollTrigger.matchMedia({
+    all: function () {
+      const stats = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item-content",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      stats.from(".stat__item-content svg rect", {duration: .3, scaleY: 0, transformOrigin: "bottom", stagger: .1})
+      
+      const people = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item-title.people",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      people.from(".stat__item-title.people .item", {delay: .5, duration: .3, opacity: 0, stagger: .1})
+    },
+    "(min-width: 576px)": function () {
+      const item = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      item.from(".stat__item", {duration: .3, opacity: 0, y: 20, stagger: .1})
+    },
+    "(max-width: 576px)": function () {
+      gsap.utils.toArray(".stat__item").forEach(el => {
+        const item = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            markers: false,
+            scrub: false,
+          },
+        });
+        item.to(el, {duration: .3, opacity: 1, y: 0, stagger: .1})
+      })
+    },
+  });
 }
 
 function setMenuLinks() {
@@ -253,54 +301,3 @@ barba.init({
     },
   }]
 });
-
-
-(function gsapMatchMedia() {
-  ScrollTrigger.matchMedia({
-    all: function () {
-      const stats = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".stat__item-content",
-          start: "top 90%",
-          markers: false,
-          scrub: false,
-        },
-      });
-      stats.from(".stat__item-content svg rect", {duration: .3, scaleY: 0, transformOrigin: "bottom", stagger: .1})
-      
-      const people = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".stat__item-title.people",
-          start: "top 90%",
-          markers: false,
-          scrub: false,
-        },
-      });
-      people.from(".stat__item-title.people .item", {delay: .5, duration: .3, opacity: 0, stagger: .1})
-    },
-    "(min-width: 576px)": function () {
-      const item = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".stat__item",
-          start: "top 90%",
-          markers: false,
-          scrub: false,
-        },
-      });
-      item.from(".stat__item", {duration: .3, opacity: 0, y: 20, stagger: .1})
-    },
-    "(max-width: 576px)": function () {
-      gsap.utils.toArray(".stat__item").forEach(el => {
-        const item = gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            markers: false,
-            scrub: false,
-          },
-        });
-        item.to(el, {duration: .3, opacity: 1, y: 0, stagger: .1})
-      })
-    },
-  });
-})();

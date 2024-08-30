@@ -1086,7 +1086,7 @@ ul.transition li {
   -webkit-transform: scaleY(0);
       -ms-transform: scaleY(0);
           transform: scaleY(0);
-  background: #232324;
+  background: #000;
   width: 20%;
 }
 
