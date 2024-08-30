@@ -276,7 +276,7 @@ barba.init({
           scrub: false,
         },
       });
-      people.from(".stat__item-title.people .item", {delay: .6, duration: .3, opacity: 0, stagger: .1})
+      people.from(".stat__item-title.people .item", {delay: .5, duration: .3, opacity: 0, stagger: .1})
     },
     "(min-width: 576px)": function () {
       const item = gsap.timeline({
