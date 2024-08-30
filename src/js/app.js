@@ -57,13 +57,15 @@ headerLinks.forEach(el => {
 
 
 function lerp(start, end, amount) {
-    return (1-amount)*start+amount*end
+  return (1 - amount) * start + amount * end;
 }
+
 const cursor = document.createElement('div');
 cursor.className = 'cursor';
 
 const cursorF = document.createElement('div');
 cursorF.className = 'cursor-f';
+
 let cursorX = 0;
 let cursorY = 0;
 let pageX = 0;
@@ -75,29 +77,37 @@ let followSpeed = .16;
 document.querySelector('.fixed').appendChild(cursor);
 document.querySelector('.fixed').appendChild(cursorF);
 
-if ('ontouchstart' in window) {
-    cursor.style.display = 'none';
-    cursorF.style.display = 'none';
-}
-  
-cursor.style.setProperty('--size', size+'px');
-cursorF.style.setProperty('--size', sizeF+'px');
+// Set initial opacity to 0
+cursor.style.opacity = 0;
+cursorF.style.opacity = 0;
 
-window.addEventListener('mousemove', function(e) {
-    pageX = e.clientX;
-    pageY = e.clientY;
-    cursor.style.left = e.clientX-size/2+'px';
-    cursor.style.top = e.clientY-size/2+'px';
+if ('ontouchstart' in window) {
+  cursor.style.opacity = 0;
+  cursorF.style.opacity = 0;
+} else {
+  cursor.style.setProperty('--size', size + 'px');
+  cursorF.style.setProperty('--size', sizeF + 'px');
+}
+
+window.addEventListener('mousemove', function (e) {
+  pageX = e.clientX;
+  pageY = e.clientY;
+  cursor.style.left = e.clientX - size / 2 + 'px';
+  cursor.style.top = e.clientY - size / 2 + 'px';
+  
+  // Show cursor on mouse move
+  cursor.style.opacity = 1;
+  cursorF.style.opacity = 1;
 });
 
 function loop() {
-    cursorX = lerp(cursorX, pageX, followSpeed);
-    cursorY = lerp(cursorY, pageY, followSpeed);
-    cursorF.style.top = cursorY - sizeF/2 + 'px';
-    cursorF.style.left = cursorX - sizeF/2 + 'px';
-    requestAnimationFrame(loop);
+  cursorX = lerp(cursorX, pageX, followSpeed);
+  cursorY = lerp(cursorY, pageY, followSpeed);
+  cursorF.style.top = cursorY - sizeF / 2 + 'px';
+  cursorF.style.left = cursorX - sizeF / 2 + 'px';
+  requestAnimationFrame(loop);
 }
-  
+
 loop();
 
 let startY;
@@ -105,60 +115,73 @@ let endY;
 let clicked = false;
 
 function mousedown(e) {
-    gsap.to(cursor, {scale: 4.5});
-    gsap.to(cursorF, {scale: .4});
-    clicked = true;
-    startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+  gsap.to(cursor, { scale: 4.5 });
+  gsap.to(cursorF, { scale: .4 });
+  clicked = true;
+  startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+  cursor.style.opacity = 1;  // Ensure cursor is visible on interaction
+  cursorF.style.opacity = 1;
 }
 
 function mousehover(e) {
-    gsap.to(cursor, {scale: 3});
-    gsap.to(cursorF, {scale: .3});
-    clicked = true;
-    startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+  gsap.to(cursor, { scale: 3 });
+  gsap.to(cursorF, { scale: .3 });
+  clicked = true;
+  startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+  cursor.style.opacity = 1;  // Ensure cursor is visible on hover
+  cursorF.style.opacity = 1;
 }
-  
+
 function mouseup(e) {
-    gsap.to(cursor, {scale: 1});
-    gsap.to(cursorF, {scale: 1});
-    endY = e.clientY || endY;
-    if (clicked && startY && Math.abs(startY - endY) >= 40) {
-        clicked = false;
-        startY = null;
-        endY = null;
-    }
+  gsap.to(cursor, { scale: 1 });
+  gsap.to(cursorF, { scale: 1 });
+  endY = e.clientY || endY;
+  if (clicked && startY && Math.abs(startY - endY) >= 40) {
+      clicked = false;
+      startY = null;
+      endY = null;
+  }
+  // Hide cursor after a delay
+  setTimeout(() => {
+      if (!clicked) {
+          cursor.style.opacity = 0;
+          cursorF.style.opacity = 0;
+      }
+  }, 500); // Adjust delay as needed
 }
+
 document.querySelectorAll('.btn:not(disabled)').forEach(el => {
-    el.addEventListener('mouseover', mousehover)
-    el.addEventListener('mouseleave', mouseup)
+  el.addEventListener('mouseover', mousehover);
+  el.addEventListener('mouseleave', mouseup);
 });
 document.querySelectorAll('.hover').forEach(el => {
-    el.addEventListener('mouseover', mousehover)
-    el.addEventListener('mouseleave', mouseup)
+  el.addEventListener('mouseover', mousehover);
+  el.addEventListener('mouseleave', mouseup);
 });
-window.onload = function() {
-    document.querySelectorAll('.swiper-pagination-bullet').forEach(el => {
-        el.addEventListener('mouseover', mousehover)
-        el.addEventListener('mouseleave', mouseup)
-    });
+window.onload = function () {
+  document.querySelectorAll('.swiper-pagination-bullet').forEach(el => {
+      el.addEventListener('mouseover', mousehover);
+      el.addEventListener('mouseleave', mouseup);
+  });
 }
 document.querySelectorAll('.floor__tab-item').forEach(el => {
-    el.addEventListener('mouseover', mousehover)
-    el.addEventListener('mouseleave', mouseup)
+  el.addEventListener('mouseover', mousehover);
+  el.addEventListener('mouseleave', mouseup);
 });
 document.querySelectorAll('.gotoblock').forEach(el => {
-    el.addEventListener('mouseover', mousehover)
-    el.addEventListener('mouseleave', mouseup)
+  el.addEventListener('mouseover', mousehover);
+  el.addEventListener('mouseleave', mouseup);
 });
 window.addEventListener('mousedown', mousedown, false);
 window.addEventListener('touchstart', mousedown, false);
-window.addEventListener('touchmove', function(e) {
-if (clicked) {
-    endY = e.touches[0].clientY || e.targetTouches[0].clientY;
-}
+window.addEventListener('touchmove', function (e) {
+  if (clicked) {
+      endY = e.touches[0].clientY || e.targetTouches[0].clientY;
+  }
 }, false);
 window.addEventListener('touchend', mouseup, false);
 window.addEventListener('mouseup', mouseup, false);
+
 
 
 
@@ -179,18 +202,18 @@ function contentAnimation(){
 }
 
 function setMenuLinks() {
-  const links = document.querySelectorAll('.header__link');
+  const links = document.querySelectorAll('.link');
   const location = window.location.pathname;
   links.forEach(link => {
-      const linkHref = '/' + link.getAttribute('href');
-      if(linkHref == location){
-          link.classList.add('active');
-          link.setAttribute('href', '#!');
-      }else{
-          link.classList.remove('active');
-          const dataHref = link.getAttribute('data-href');
-          link.setAttribute('href', dataHref);
-      }
+    const linkHref = '/' + link.getAttribute('href');
+    if(linkHref == location){
+      link.classList.add('active');
+      link.setAttribute('href', '#!');
+    }else{
+      link.classList.remove('active');
+      const dataHref = link.getAttribute('data-href');
+      link.setAttribute('href', dataHref);
+    }
   });
 }
 
