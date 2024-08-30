@@ -253,3 +253,36 @@ barba.init({
     },
   }]
 });
+
+
+(function gsapMatchMedia() {
+  ScrollTrigger.matchMedia({
+    all: function () {
+      const stats = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item-content",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      stats.from(".stat__item-content svg rect", {duration: .3, scaleY: 0, transformOrigin: "bottom", stagger: .1})
+      
+      const people = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stat__item-title.people",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      people.from(".stat__item-title.people .item", {duration: .3, opacity: 0, stagger: .1})
+    },
+    "(min-width: 576px)": function () {
+      
+    },
+    "(max-width: 576px)": function () {
+      
+    },
+  });
+})();

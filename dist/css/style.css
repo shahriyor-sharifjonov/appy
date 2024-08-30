@@ -717,6 +717,7 @@
 }
 
 .stat__item-title.people {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
