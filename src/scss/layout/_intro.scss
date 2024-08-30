@@ -55,6 +55,12 @@
             overflow: hidden;
             position: relative;
             @include res('height', 70px);
+            @include media(1400){
+                @include resm('height', 60px);
+            }
+            @include media(576){
+                @include resa('height', 54px);
+            }
             &.active{
                 color: #D6FF63;
             }

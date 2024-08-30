@@ -938,6 +938,10 @@ ul.transition li {
     margin-bottom: 5.37109375vw;
   }
 
+  .intro__title .line {
+    height: 5.859375vw;
+  }
+
   .intro__title .line span {
     font-size: 5.46875vw;
   }
@@ -1173,6 +1177,10 @@ ul.transition li {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0;
+  }
+
+  .intro__title .line {
+    height: 14.4vw;
   }
 
   .intro__title .line span {
