@@ -14,12 +14,12 @@ mixin form()
                                 </svg>
                             |  @Alisa_AppDelivery 
                 .form__right
-                    form(action="" method="post") 
+                    form(action="#!") 
                         label.form__label(for="name") Ваше имя
                         input.form__input(type="text" id="name" name="name" placeholder="Имя")
                         label.form__label(for="telegram") Имя в Telegram
                         input.form__input(type="text" id="telegram" name="telegram" placeholder="@name")
-                        button.form__submit.hover(type="submit") Отправить
+                        button(type="submit").form__submit.hover Отправить
                     .form__agreement 
-                        p Нажимая на кнопку «Отправить», вы соглашаетесь с <br>
-                            a(href="#") политикой обработки персональных данных
+                        p Нажимая на кнопку «Отправить», вы соглашаетесь с 
+                            a(href="#").hover политикой обработки персональных данных

@@ -34,6 +34,7 @@
         width: 100%;
         @include media(576){
             flex-direction: column;
+            @include resa('gap', 40px);
         }
     }
 
@@ -188,6 +189,10 @@
             @include resm('font-size', 16px);
             @include resm('margin-bottom', 8px);
         }
+        @include media(576){
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 8px);
+        }
     }
 
     &__input {
@@ -209,6 +214,13 @@
             @include resm('border-width', 1px);
             @include resm('margin-bottom', 24px);
         }
+        @include media(576){
+            @include resa('padding', 16px);
+            @include resa('font-size', 18px);
+            @include resa('border-radius', 8px);
+            @include resa('border-width', 1px);
+            @include resa('margin-bottom', 24px);
+        }
     }
 
     &__submit {
@@ -225,6 +237,11 @@
             @include resm('padding', 16px);
             @include resm('border-radius', 8px);
             @include resm('font-size', 18px);
+        }
+        @include media(576){
+            @include resa('padding', 16px);
+            @include resa('border-radius', 8px);
+            @include resa('font-size', 18px);
         }
         &:hover {
             box-shadow: 0 0 30px #3A82EE;
@@ -243,6 +260,10 @@
             @include resm('font-size', 14px);
             @include resm('margin-top', 8px);
         }
+        @include media(576){
+            @include resa('font-size', 14px);
+            @include resa('margin-top', 8px);
+        }
 
         p {
             text-align: left;
@@ -251,6 +272,10 @@
 
         a {
             color: #828282;
+            transition: color 200ms ease-out;
+            &:hover{
+                color: #fff;
+            }
         }
     }
 }

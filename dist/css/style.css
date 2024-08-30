@@ -937,6 +937,13 @@
 
 .form__agreement a {
   color: #828282;
+  -webkit-transition: color 200ms ease-out;
+  -o-transition: color 200ms ease-out;
+  transition: color 200ms ease-out;
+}
+
+.form__agreement a:hover {
+  color: #fff;
 }
 
 .terms {
@@ -2590,6 +2597,7 @@ ul.transition li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 10.6666666667vw;
   }
 
   .form__left,
@@ -2653,6 +2661,30 @@ ul.transition li {
   .form__telegram-link__icon svg {
     width: 3.4666666667vw;
     height: 3.4666666667vw;
+  }
+
+  .form__label {
+    font-size: 4.2666666667vw;
+    margin-bottom: 2.1333333333vw;
+  }
+
+  .form__input {
+    padding: 4.2666666667vw;
+    font-size: 4.8vw;
+    border-radius: 2.1333333333vw;
+    border-width: 0.2666666667vw;
+    margin-bottom: 6.4vw;
+  }
+
+  .form__submit {
+    padding: 4.2666666667vw;
+    border-radius: 2.1333333333vw;
+    font-size: 4.8vw;
+  }
+
+  .form__agreement {
+    font-size: 3.7333333333vw;
+    margin-top: 2.1333333333vw;
   }
 
   .stat {
