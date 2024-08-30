@@ -837,19 +837,17 @@
           justify-content: center;
   color: white;
   border: solid white;
+  font-weight: 500;
   border-width: 0.0625vw;
   padding: 1vw;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
   gap: 0.625vw;
   border-radius: 0.5vw;
-  font-weight: 500;
   font-size: 1vw;
 }
 
 .form__telegram-link__icon {
-  width: 1.5vw;
-  height: 1.5vw;
   background: -webkit-gradient(linear, left top, left bottom, from(#2AABEE), color-stop(10000%, #229ED9));
   background: -o-linear-gradient(top, #2AABEE 0%, #229ED9 10000%);
   background: linear-gradient(180deg, #2AABEE 0%, #229ED9 10000%);
@@ -863,6 +861,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 1.5vw;
+  height: 1.5vw;
 }
 
 .form__telegram-link__icon svg {
@@ -880,32 +880,32 @@
 
 .form__input {
   width: 100%;
-  padding: 1vw;
   font-weight: 400;
-  font-size: 1.125vw;
-  border-radius: 0.5vw;
   background: #363738;
   border: solid #5D5F61;
-  border-width: 0.0625vw;
   color: white;
-  margin-bottom: 1.5vw;
   outline: none;
+  padding: 1vw;
+  font-size: 1.125vw;
+  border-radius: 0.5vw;
+  border-width: 0.0625vw;
+  margin-bottom: 1.5vw;
 }
 
 .form__submit {
   width: 100%;
-  padding: 1vw;
   background: #3478FF;
   border: none;
-  border-radius: 0.5vw;
   color: white;
-  font-size: 1.125vw;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 200ms;
   transition: -webkit-box-shadow 200ms;
   -o-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
   transition: box-shadow 200ms, -webkit-box-shadow 200ms;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  font-size: 1.125vw;
 }
 
 .form__submit:hover {
@@ -924,12 +924,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 0.875vw;
   text-align: center;
+  text-align: left;
+  font-size: 0.875vw;
   margin-top: 0.5vw;
 }
 
 .form__agreement p {
+  text-align: left;
   color: white;
 }
 
@@ -2021,6 +2023,77 @@ ul.transition li {
     font-size: 1.7578125vw;
   }
 
+  .form {
+    margin-bottom: 9.765625vw;
+  }
+
+  .form__container {
+    padding: 7.8125vw;
+    border-radius: 2.34375vw;
+  }
+
+  .form__title {
+    font-size: 3.90625vw;
+    line-height: 3.90625vw;
+    margin-bottom: 2.34375vw;
+  }
+
+  .form__subtitle {
+    font-size: 1.953125vw;
+    line-height: 2.734375vw;
+    margin-bottom: 3.90625vw;
+  }
+
+  .form__profile-img {
+    margin-right: 2.34375vw;
+    width: 5.859375vw;
+    height: 5.859375vw;
+  }
+
+  .form__telegram-link {
+    border-width: 0.09765625vw;
+    padding: 1.5625vw;
+    padding-top: 0.78125vw;
+    padding-bottom: 0.78125vw;
+    gap: 0.9765625vw;
+    border-radius: 0.78125vw;
+    font-size: 1.5625vw;
+  }
+
+  .form__telegram-link__icon {
+    width: 2.34375vw;
+    height: 2.34375vw;
+  }
+
+  .form__telegram-link__icon svg {
+    width: 1.26953125vw;
+    height: 1.26953125vw;
+  }
+
+  .form__label {
+    font-size: 1.5625vw;
+    margin-bottom: 0.78125vw;
+  }
+
+  .form__input {
+    padding: 1.5625vw;
+    font-size: 1.7578125vw;
+    border-radius: 0.78125vw;
+    border-width: 0.09765625vw;
+    margin-bottom: 2.34375vw;
+  }
+
+  .form__submit {
+    padding: 1.5625vw;
+    border-radius: 0.78125vw;
+    font-size: 1.7578125vw;
+  }
+
+  .form__agreement {
+    font-size: 1.3671875vw;
+    margin-top: 0.78125vw;
+  }
+
   .stat {
     padding-top: 9.765625vw;
     padding-bottom: 9.765625vw;
@@ -2499,6 +2572,87 @@ ul.transition li {
 
   .hello {
     padding-top: 21.3333333333vw;
+  }
+
+  .form {
+    margin-bottom: 21.3333333333vw;
+  }
+
+  .form__container {
+    padding: 6.4vw;
+    padding-bottom: 10.6666666667vw;
+    padding-top: 10.6666666667vw;
+    border-radius: 6.4vw;
+  }
+
+  .form__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__left,
+  .form__right {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .form__title {
+    font-size: 8.5333333333vw;
+    line-height: 100%;
+    margin-bottom: 6.4vw;
+    text-align: center;
+  }
+
+  .form__subtitle {
+    font-size: 4.2666666667vw;
+    line-height: 140%;
+    text-align: center;
+    margin-bottom: 10.6666666667vw;
+  }
+
+  .form__profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6.4vw;
+  }
+
+  .form__profile-img {
+    margin-right: 0;
+    width: 16vw;
+    height: 16vw;
+  }
+
+  .form__telegram-link {
+    border-width: 0.2666666667vw;
+    padding: 4.2666666667vw;
+    padding-top: 2.1333333333vw;
+    padding-bottom: 2.1333333333vw;
+    gap: 2.6666666667vw;
+    border-radius: 2.1333333333vw;
+    font-size: 4.2666666667vw;
+  }
+
+  .form__telegram-link__icon {
+    width: 6.4vw;
+    height: 6.4vw;
+  }
+
+  .form__telegram-link__icon svg {
+    width: 3.4666666667vw;
+    height: 3.4666666667vw;
   }
 
   .stat {
