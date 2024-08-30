@@ -2,35 +2,35 @@ mixin header()
     header.header 
         .header__nav.container 
             .header__left 
-                a(href="index.html").header__logo
+                a(href="index.html").header__logo.hover
                     img(src="@img/logo.svg", alt="" draggable="false") 
                     .sm 
                         img(src="@img/logo-short.svg", alt="" draggable="false")
                 .header__list 
-                    a(href="#!").header__link О нас 
-                    a(href="#!").header__link CPA-сеть
-                    a(href="#!").header__link Аренда приложений
-                    a(href="#!").header__link Вакансии
+                    a(href="#!").header__link.hover О нас 
+                    a(href="#!").header__link.hover CPA-сеть
+                    a(href="#!").header__link.hover Аренда приложений
+                    a(href="#!").header__link.hover Вакансии
             .header__right 
                 .header__lang 
-                    button.header__lang-btn RU
+                    button.header__lang-btn.hover RU
                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.75731 3.70723L8.05732 0.407227L8.99998 1.34989L4.75731 5.59256L0.514648 1.34989L1.45732 0.407227L4.75731 3.70723Z" fill="white"/>
                         </svg>
                     .header__lang-content 
-                        button.header__lang-item UA
-                        button.header__lang-item EN
-                a(href="#!").header__btn Написать нам
+                        button.header__lang-item.hover UA
+                        button.header__lang-item.hover EN
+                a(href="#!").header__btn.hover Написать нам
                 button.header__button 
                     span.header__button-line
         .header__menu 
             .header__menu-list 
-                a(href="#!").header__link О нас 
-                a(href="#!").header__link CPA-сеть 
-                a(href="#!").header__link Аренда приложений 
-                a(href="#!").header__link Вакансии 
+                a(href="#!").header__link.hover.close О нас 
+                a(href="#!").header__link.hover.close CPA-сеть 
+                a(href="#!").header__link.hover.close Аренда приложений 
+                a(href="#!").header__link.hover.close Вакансии 
             .header__menu-bot 
-                a(href="#!").header__btn.active Написать нам
+                a(href="#!").header__btn.active.hover.close Написать нам
                 .header__menu-soc 
                     a(href="#!").header__menu-soc-item
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
