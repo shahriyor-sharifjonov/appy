@@ -91,6 +91,9 @@
         @include media(1400){
             @include resm('font-size', 16px);
         }
+        @include media(576){
+            @include resa('font-size', 24px);
+        }
     }
     &__right{
         display: flex;
@@ -107,6 +110,11 @@
     &__btn{
         @include media(576){
             display: none;
+        }
+        &.active{
+            @include media(576){
+                display: flex;
+            }
         }
     }
     &__btn,
@@ -311,9 +319,35 @@
             transition: 200ms ease-out;
             opacity: 0;
             visibility: hidden;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            @include resa('padding-top', 88px);
+            @include resa('padding-bottom', 64px);
             &.open{
                 opacity: 1;
                 visibility: visible;
+            }
+        }
+        &-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include resa('gap', 18px);
+        }
+        &-soc{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include resa('margin-top', 16px);
+            @include resa('gap', 8px);
+            &-item{
+                @include resa('width', 32px);
+                @include resa('height', 32px);
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
