@@ -6,6 +6,10 @@
         @include resm('padding-top', 40px);
         @include resm('padding-bottom', 40px);
     }
+    @include media(576){
+        @include resa('padding-top', 40px);
+        @include resa('padding-bottom', 40px);
+    }
     &__body{
         display: flex;
         flex-direction: column;
@@ -21,6 +25,13 @@
             @include resm('padding-bottom', 16px);
             @include resm('margin-bottom', 16px);
         }
+        @include media(576){
+            flex-direction: column;
+            justify-content: flex-start;
+            @include resa('padding-bottom', 16px);
+            @include resa('margin-bottom', 16px);
+            @include resa('gap', 33px);
+        }
     }
     &__content{
         display: flex;
@@ -29,6 +40,10 @@
         @include res('gap', 33px);
         @include media(1400){
             @include resm('gap', 33px);
+        }
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 33px);
         }
     }
     &__logo{
@@ -39,6 +54,9 @@
         @include res('height', 20px);   
         @include media(1400){
             @include resm('height', 20px);   
+        }
+        @include media(576){
+            @include resa('height', 20px);   
         }
         svg{
             height: 100%;
@@ -53,6 +71,10 @@
         @include media(1400){
             @include resm('gap', 18px);
         }
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 18px);
+        }
     }
     &__link{
         font-weight: 500;
@@ -62,6 +84,9 @@
         @include media(1400){
             @include resm('font-size', 16px);
         }
+        @include media(576){
+            @include resa('font-size', 16px);
+        }
     }
     &__soc{
         display: flex;
@@ -70,6 +95,9 @@
         @include res('gap', 8px);
         @include media(1400){
             @include resm('gap', 8px);
+        }
+        @include media(576){
+            @include resa('gap', 8px);
         }
         &-item{
             display: flex;
@@ -81,6 +109,10 @@
                 @include resm('width', 24px);
                 @include resm('height', 24px);
             }
+            @include media(576){
+                @include resa('width', 24px);
+                @include resa('height', 24px);
+            }
             svg, img{
                 width: 100%;
                 height: 100%;
@@ -91,6 +123,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 8px);
+        }
     }
     &__copy{
         font-weight: 600;
@@ -99,6 +135,9 @@
         @include res('font-size', 12px);
         @include media(1400){
             @include resm('font-size', 12px);
+        }
+        @include media(576){
+            @include resa('font-size', 12px);
         }
     }
     &__privacy{
@@ -110,6 +149,9 @@
         @include res('font-size', 12px);
         @include media(1400){
             @include resm('font-size', 12px);
+        }
+        @include media(576){
+            @include resa('font-size', 12px);
         }
         &:hover{
             color: #fff;
