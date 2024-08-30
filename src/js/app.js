@@ -268,6 +268,16 @@ function contentAnimation(){
         },
       });
       people.from(".stat__item-title.people .item", {delay: .3, duration: .3, opacity: 0, stagger: .1})
+
+      const trafic = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".trafic__item",
+          start: "top 90%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      trafic.from(".trafic__item", {delay: .3, duration: .3, opacity: 0, stagger: .07})
     },
     "(min-width: 576px)": function () {
       const item = gsap.timeline({
