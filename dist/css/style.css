@@ -1084,25 +1084,23 @@
 
 .vacancies .vacancies__list-item {
   width: 100%;
-  padding: 2.5625vw;
-  padding-right: 5.125vw;
   background-color: white;
-  border-radius: 1.5vw;
   text-align: start;
   position: relative;
+  border-radius: 1.5vw;
+  padding: 2.5625vw;
+  padding-right: 5.125vw;
 }
 
 .vacancies .vacancies__list-item__text {
   color: black;
   font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.0625vw;
   font-size: 2.5vw;
-  line-height: 2.5vw;
-  letter-spacing: -5%;
 }
 
 .vacancies .vacancies__list-item__indicator {
-  width: 2.625vw;
-  height: 2.625vw;
   background-color: #3A82EE;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1116,10 +1114,13 @@
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 2.5vw;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  right: 2.5vw;
+  width: 2.625vw;
+  min-width: 2.625vw;
+  height: 2.625vw;
 }
 
 .vacancies .vacancies__list-item__indicator svg {
@@ -2188,6 +2189,33 @@ ul.transition li {
     letter-spacing: -0.09765625vw;
   }
 
+  .vacancies .vacancies__list {
+    gap: 1.5625vw;
+  }
+
+  .vacancies .vacancies__list-item {
+    border-radius: 2.34375vw;
+    padding: 4.00390625vw;
+    padding-right: 8.0078125vw;
+  }
+
+  .vacancies .vacancies__list-item__text {
+    letter-spacing: -0.09765625vw;
+    font-size: 3.90625vw;
+  }
+
+  .vacancies .vacancies__list-item__indicator {
+    right: 3.90625vw;
+    width: 4.1015625vw;
+    min-width: 4.1015625vw;
+    height: 4.1015625vw;
+  }
+
+  .vacancies .vacancies__list-item__indicator svg {
+    width: 1.7578125vw;
+    height: 1.7578125vw;
+  }
+
   .stat {
     padding-top: 9.765625vw;
     padding-bottom: 9.765625vw;
@@ -2858,6 +2886,32 @@ ul.transition li {
     margin-bottom: 10.6666666667vw;
     font-size: 10.6666666667vw;
     letter-spacing: -0.2666666667vw;
+  }
+
+  .vacancies .vacancies__list {
+    gap: 4.2666666667vw;
+  }
+
+  .vacancies .vacancies__list-item {
+    border-radius: 6.4vw;
+    padding: 4.2666666667vw;
+  }
+
+  .vacancies .vacancies__list-item__text {
+    letter-spacing: -0.2666666667vw;
+    font-size: 8.5333333333vw;
+  }
+
+  .vacancies .vacancies__list-item__indicator {
+    right: 4.2666666667vw;
+    width: 9.6vw;
+    min-width: 9.6vw;
+    height: 9.6vw;
+  }
+
+  .vacancies .vacancies__list-item__indicator svg {
+    width: 3.2vw;
+    height: 3.2vw;
   }
 
   .stat {
