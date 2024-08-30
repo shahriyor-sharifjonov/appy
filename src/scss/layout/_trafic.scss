@@ -1,0 +1,106 @@
+@import '../abstracts/mixins';
+.trafic{
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 56px);
+        @include res('max-width', 800px);
+        @include res('margin-bottom', 80px);
+        @include media(1400){
+            @include resm('font-size', 48px);
+            @include resm('max-width', 640px);
+            @include resm('letter-spacing', -1px);
+            @include resm('margin-bottom', 80px);
+        }
+        @include media(576){
+            @include resa('font-size', 40px);
+            @include resa('max-width', 640px);
+            @include resa('letter-spacing', -1.8px);
+            @include resa('margin-bottom', 80px);
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('margin-bottom', 80px);
+        @include res('max-width', 792px);
+        @include res('gap', 40px);
+        @include media(1400){
+            @include resm('max-width', 642px);
+            @include resm('margin-bottom', 80px);
+            @include resm('gap', 40px);
+        }
+        @include media(576){
+            @include resa('max-width', 642px);
+            @include resa('margin-bottom', 80px);
+            @include resa('gap', 24px);
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        @include res('width', 80px);
+        @include res('height', 80px);
+        @include media(1400){
+            @include resm('width', 80px);
+            @include resm('height', 80px);
+        }
+        @include media(576){
+            @include resa('width', 48px);
+            @include resa('height', 48px);
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 90%;
+        font-weight: 700;
+        background: #3A82EE;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        transition: box-shadow 200ms ease-out;
+        @include res('border-radius', 8px);
+        @include res('padding-top', 17px);
+        @include res('padding-bottom', 17px);
+        @include res('padding-left', 32px);
+        @include res('padding-right', 32px);
+        @include res('letter-spacing', -1px);
+        @include res('font-size', 18px);
+        @include media(1400){
+            @include resm('border-radius', 8px);
+            @include resm('padding-top', 17px);
+            @include resm('padding-bottom', 17px);
+            @include resm('padding-left', 32px);
+            @include resm('padding-right', 32px);
+            @include resm('letter-spacing', -1px);
+            @include resm('font-size', 18px);
+        }
+        @include media(576){
+            width: 100%;
+            @include resa('border-radius', 8px);
+            @include resa('padding-top', 17px);
+            @include resa('padding-bottom', 17px);
+            @include resa('padding-left', 32px);
+            @include resa('padding-right', 32px);
+            @include resa('letter-spacing', -1px);
+            @include resa('font-size', 18px);
+        }
+        &:hover{
+            box-shadow: 0 0 30px #3A82EE;
+        }
+    }
+}
