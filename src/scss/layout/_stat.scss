@@ -103,8 +103,15 @@
                     justify-content: center;
                     @include res('width', 56px);
                     @include res('height', 56px);
+                    @include media(1400){
+                        @include resm('width', 56px);
+                        @include resm('height', 56px);
+                    }
                     &:not(:first-of-type){
                         @include res('margin-left', -20px);
+                        @include media(1400){
+                            @include resm('margin-left', -20px);
+                        }
                     }
                     &:nth-of-type(1) {
                         z-index: 5;
@@ -153,6 +160,10 @@
             line-height: 140%;
             @include res('letter-spacing', -0.5px);
             @include res('font-size', 24px);
+            @include media(1400){
+                @include resm('letter-spacing', -0.5px);
+                @include resm('font-size', 24px);
+            }
         }
         &-link{
             position: absolute;
@@ -164,6 +175,12 @@
             @include res('height', 48px);
             @include res('top', 24px);
             @include res('right', 24px);
+            @include media(1400){
+                @include resm('width', 48px);
+                @include resm('height', 48px);
+                @include resm('top', 24px);
+                @include resm('right', 24px);
+            }
             svg{
                 width: 100%;
                 height: 100%;

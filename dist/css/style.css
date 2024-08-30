@@ -1215,12 +1215,33 @@ ul.transition li {
     width: 46.484375vw;
   }
 
+  .stat__item-title.people .item {
+    width: 5.46875vw;
+    height: 5.46875vw;
+  }
+
+  .stat__item-title.people .item:not(:first-of-type) {
+    margin-left: -1.953125vw;
+  }
+
   .stat__item-content {
     top: 2.34375vw;
     right: 2.34375vw;
     bottom: 2.34375vw;
     width: 21.484375vw;
     height: 19.7265625vw;
+  }
+
+  .stat__item-desc {
+    letter-spacing: -0.048828125vw;
+    font-size: 2.34375vw;
+  }
+
+  .stat__item-link {
+    width: 4.6875vw;
+    height: 4.6875vw;
+    top: 2.34375vw;
+    right: 2.34375vw;
   }
 
   .footer {
