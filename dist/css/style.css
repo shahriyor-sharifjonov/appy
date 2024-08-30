@@ -583,6 +583,14 @@
   }
 }
 
+.hello {
+  padding-top: 9vw;
+}
+
+.hello__container {
+  background: #232324;
+}
+
 .footer {
   background: #0A0A0A;
   padding-top: 2.5vw;

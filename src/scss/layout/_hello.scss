@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+.hello{
+    @include res('padding-top', 144px);
+    &__container{
+        background: #232324;
+    }
+}
