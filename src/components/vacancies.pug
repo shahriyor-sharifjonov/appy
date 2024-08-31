@@ -2,16 +2,38 @@ mixin vacancies()
   section.vacancies 
     .vacancies__container.container 
       h1.vacancies-title Открытые вакансии
-      .vacancies__list
-        button(type="button").vacancies__list-item
-          p.vacancies__list-item__text TEAM LEAD MEDIABUYER
-          .vacancies__list-item__indicator
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 9H18M9 0L9 18" stroke="white" stroke-width="2"/>
-            </svg>
-        button(type="button").vacancies__list-item
-          p.vacancies__list-item__text MEDIABUYER
-          .vacancies__list-item__indicator
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 9H18M9 0L9 18" stroke="white" stroke-width="2"/>
-            </svg>
+      .vacancies__list 
+        .accordion 
+          button(type="button").accordion__button.vacancies__list-item.hover 
+            p.vacancies__list-item__text TEAM LEAD MEDIABUYER
+            .vacancies__list-item__indicator
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 9H18M9 0L9 18" stroke="white" stroke-width="2"/>
+              </svg>
+          .accordion__content 
+            h3 Нам нужен
+            p Крутой тимлид баинга, который возглавит отдел и который не побоится построить лестницу в небо к безграничному профиту) Если у тебя уже есть своя команда, то будем рады принять к нам слаженную тиму.
+            h3 Ты наш идеальный кандидат, если:
+            p • специализируешься на вертикали Gambling/Betting/Crypto;<br>• знаешь Facebook и льешь не менее 2 лет;<br>• у тебя есть опыт работы с бюджетами 30000$+;<br>• есть актуальные кейсы с высокими ROI в Gambling;<br>• умеешь находить подходы к любым Гео;<br>• есть опыт управления командой.
+            h3 Чем предстоит заниматься:
+            p • активным участием в формировании команды;<br>• поиском и тестированием связок;<br>• настройкой работы и структурированием своей команды;<br>• постоянным анализом результатов и ведением отчетности;<br>• направлением, помощью и контролем команды.
+            h3 Условия для работы, роста и тотального заработка:
+            p • развитую инфраструктуру, отлаженные бизнес-процессы<br>•собственный сервис IOS и PWA приложений - любые приложения бесплатно;<br>•свой крео-отдел;<br>•проверенные рекламодатели, эксклюзивы, высокие ставки;<br>•другие необходимые инструменты и сервисы.
+            a(href="#!").hover Хочу у вас работать! 
+        .accordion 
+          button(type="button").accordion__button.vacancies__list-item.hover 
+            p.vacancies__list-item__text MEDIABUYER
+            .vacancies__list-item__indicator
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 9H18M9 0L9 18" stroke="white" stroke-width="2"/>
+              </svg>
+          .accordion__content 
+            h3 Нам нужен
+            p Опытный баер в нише iGaming, готового расти и развиваться как в плане скилла, так и в плане профита.
+            h3 Ты наш идеальный кандидат, если:
+            p специализируешься на вертикали Gambling;<br>• знаешь Facebook и льешь не менее 2 лет;<br>• у тебя есть опыт работы с бюджетами 30000$+;<br>• есть актуальные кейсы с высокими ROI;<br>• умеешь находить подходы к любым Гео;<br>• есть опыт управления командой и наличие свежих успешных кейсов в Gambling вертикали. 
+            h3 Чем предстоит заниматься:
+            p • активным участием в формировании команды;<br>• поиском и тестированием связок;<br>• настройкой работы и структурированием своей команды;<br>• постоянным анализом результатов и ведением отчетности;<br>• направлением, помощью и контролем команды.
+            h3 Условия для работы, роста и тотального заработка:
+            p развитую инфраструктуру, отлаженные бизнес-процессы<br>• собственный сервис IOS и PWA приложений - любые приложения бесплатно;<br>• свой крео-отдел;<br>• проверенные рекламодатели, эксклюзивы, высокие ставки;<br>• другие необходимые инструменты и сервисы.
+            a(href="#!").hover Хочу у вас работать! 

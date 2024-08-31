@@ -1082,13 +1082,83 @@
   gap: 1vw;
 }
 
+.vacancies .vacancies__list .accordion {
+  width: 100%;
+}
+
+.vacancies .vacancies__list .accordion__content {
+  display: none;
+  background: #fff;
+  color: #000;
+  margin-top: -3.125vw;
+  border-radius: 1.5vw;
+  padding: 2.5vw;
+  padding-top: 3.125vw;
+}
+
+.vacancies .vacancies__list .accordion__content h3 {
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.0625vw;
+  font-size: 1.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.vacancies .vacancies__list .accordion__content h3:not(:first-of-type) {
+  margin-top: 1vw;
+}
+
+.vacancies .vacancies__list .accordion__content p {
+  line-height: 140%;
+  max-width: 56.25vw;
+  letter-spacing: -0.0625vw;
+  font-size: 1vw;
+}
+
+.vacancies .vacancies__list .accordion__content .hover {
+  color: #fff;
+  background: #3A82EE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -5%;
+  -webkit-transition: -webkit-box-shadow 200ms ease-out;
+  transition: -webkit-box-shadow 200ms ease-out;
+  -o-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out, -webkit-box-shadow 200ms ease-out;
+  font-size: 1.125vw;
+  padding-top: 1.0625vw;
+  padding-bottom: 1.0625vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 0.5vw;
+  margin-top: 2vw;
+}
+
+.vacancies .vacancies__list .accordion__content .hover:hover {
+  -webkit-box-shadow: 0 0 30px #3A82EE;
+          box-shadow: 0 0 30px #3A82EE;
+}
+
 .vacancies .vacancies__list-item {
   width: 100%;
   background-color: white;
   text-align: start;
   position: relative;
   border-radius: 1.5vw;
-  padding: 2.5625vw;
+  padding: 2.5vw;
   padding-right: 5.125vw;
 }
 
@@ -2193,9 +2263,42 @@ ul.transition li {
     gap: 1.5625vw;
   }
 
+  .vacancies .vacancies__list .accordion__content {
+    margin-top: -4.8828125vw;
+    border-radius: 2.34375vw;
+    padding: 3.90625vw;
+    padding-top: 4.8828125vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content h3 {
+    letter-spacing: -0.09765625vw;
+    font-size: 2.34375vw;
+    margin-bottom: 0.78125vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content h3:not(:first-of-type) {
+    margin-top: 1.5625vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content p {
+    max-width: 87.890625vw;
+    letter-spacing: -0.09765625vw;
+    font-size: 1.5625vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content .hover {
+    font-size: 1.7578125vw;
+    padding-top: 1.66015625vw;
+    padding-bottom: 1.66015625vw;
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+    border-radius: 0.78125vw;
+    margin-top: 3.125vw;
+  }
+
   .vacancies .vacancies__list-item {
     border-radius: 2.34375vw;
-    padding: 4.00390625vw;
+    padding: 3.90625vw;
     padding-right: 8.0078125vw;
   }
 
@@ -2890,6 +2993,40 @@ ul.transition li {
 
   .vacancies .vacancies__list {
     gap: 4.2666666667vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content {
+    margin-top: -13.3333333333vw;
+    border-radius: 6.4vw;
+    padding: 4.2666666667vw;
+    padding-top: 13.3333333333vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content h3 {
+    letter-spacing: -0.2666666667vw;
+    font-size: 6.4vw;
+    margin-bottom: 2.1333333333vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content h3:not(:first-of-type) {
+    margin-top: 4.2666666667vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content p {
+    max-width: 240vw;
+    letter-spacing: -0.2666666667vw;
+    font-size: 4.2666666667vw;
+  }
+
+  .vacancies .vacancies__list .accordion__content .hover {
+    width: 100%;
+    font-size: 4.8vw;
+    padding-top: 4.5333333333vw;
+    padding-bottom: 4.5333333333vw;
+    padding-left: 8.5333333333vw;
+    padding-right: 8.5333333333vw;
+    border-radius: 2.1333333333vw;
+    margin-top: 8.5333333333vw;
   }
 
   .vacancies .vacancies__list-item {
