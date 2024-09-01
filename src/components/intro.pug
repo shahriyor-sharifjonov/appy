@@ -1,20 +1,28 @@
 mixin intro() 
     section.intro#intro 
         .intro__body.container 
-            .intro__content 
+            .intro__content
                 .intro__title 
-                    .line 
-                        span Заряжаем 
-                    .line 
-                        span ваш бизнес 
-                    .line.active 
-                        span.active успехом 
+                    .intro__title-box
+                        .line 
+                            span.text1.visible Заряжаем 
+                        .line 
+                            span.text1.visible ваш бизнес 
+                        .line.active 
+                            span.active.text1.visible успехом 
+                    .intro__title-box.second
+                        .line 
+                            span.text2 Наш трафик 
+                        .line.active
+                            span.active.text2 Ваш 
+                        .line.active 
+                            span.active.text2 Профит 
                 p.intro__desc Медиабаинг, c которым выгодно работать 
                 a(href="index.html#form" data-href="index.html#form").link.intro__btn.hover Стать партнёром 
             .intro__img  
-                img(src="@img/energy.png", alt="" draggable="false") 
+                img(src="@img/energy.png" alt="" draggable="false") 
                 .intro__img-icon 
-                    img(src="@img/energy-icon.png", alt="" draggable="false")
+                    img(src="@img/energy-icon.png" alt="" draggable="false")
             .intro__right 
                 p.intro__desc Медиабаинг, c которым выгодно работать 
                 a(href="index.html#form" data-href="index.html#form").link.intro__btn Стать партнёром 
