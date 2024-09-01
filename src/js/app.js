@@ -201,7 +201,7 @@ function contentAnimation() {
 
   function animateText() {
     var tl = gsap.timeline();
-    tl.from(".intro__title-box .line span", .6, { y: 120, ease: "power1.out", delay: 1, skewY: 17, stagger: { amount: 0 } }, "-=1.1")
+    tl.from(".intro__title-box .line span", 1, { y: 120, ease: "power1.out", delay: 1, skewY: 10, stagger: { amount: 0 } }, "-=1.1")
     return tl;
   }
 
