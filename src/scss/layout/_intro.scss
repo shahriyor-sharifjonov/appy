@@ -56,6 +56,8 @@
             &.second {
                 position: absolute;
                 top: 0;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
         .line {
@@ -74,9 +76,10 @@
             }
             span {
                 display: block;
-                letter-spacing: -5%;
+                letter-spacing: -1px;
                 font-weight: 700;
                 line-height: 100%;
+                text-wrap: nowrap;
                 @include res("font-size", 64px);
                 @include media(1400) {
                     @include resm("font-size", 56px);
@@ -92,7 +95,7 @@
     }
     &__desc {
         line-height: 140%;
-        letter-spacing: -5%;
+        letter-spacing: -1px;
         display: block;
         @include res("margin-bottom", 24px);
         @include res("font-size", 20px);
@@ -121,7 +124,7 @@
         width: max-content;
         font-weight: 700;
         line-height: 90%;
-        letter-spacing: -5%;
+        letter-spacing: -1px;
         transition: box-shadow 200ms ease-out;
         &:hover {
             box-shadow: 0 0 30px #3a82ee;

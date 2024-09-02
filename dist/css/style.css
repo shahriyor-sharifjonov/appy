@@ -159,7 +159,7 @@
 
 .header__link {
   font-weight: 500;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   line-height: 100%;
   font-size: 1vw;
 }
@@ -441,6 +441,10 @@
 .intro__title-box.second {
   position: absolute;
   top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .intro__title .line {
@@ -456,9 +460,10 @@
 
 .intro__title .line span {
   display: block;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   font-weight: 700;
   line-height: 100%;
+  text-wrap: nowrap;
   font-size: 4vw;
 }
 
@@ -468,7 +473,7 @@
 
 .intro__desc {
   line-height: 140%;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   display: block;
   margin-bottom: 1.5vw;
   font-size: 1.25vw;
@@ -496,7 +501,7 @@
   width: max-content;
   font-weight: 700;
   line-height: 90%;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   -webkit-transition: -webkit-box-shadow 200ms ease-out;
   transition: -webkit-box-shadow 200ms ease-out;
   -o-transition: box-shadow 200ms ease-out;
@@ -862,9 +867,9 @@
 }
 
 .form__telegram-link__icon {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2AABEE), color-stop(10000%, #229ED9));
-  background: -o-linear-gradient(top, #2AABEE 0%, #229ED9 10000%);
-  background: linear-gradient(180deg, #2AABEE 0%, #229ED9 10000%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2aabee), color-stop(10000%, #229ed9));
+  background: -o-linear-gradient(top, #2aabee 0%, #229ed9 10000%);
+  background: linear-gradient(180deg, #2aabee 0%, #229ed9 10000%);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -895,8 +900,11 @@
 .form__input {
   width: 100%;
   font-weight: 400;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   background: #363738;
-  border: solid #5D5F61;
+  border: solid #5d5f61;
   color: white;
   outline: none;
   padding: 1vw;
@@ -906,9 +914,26 @@
   margin-bottom: 1.5vw;
 }
 
+.form__input:hover,
+.form__input:focus {
+  border-color: #d6ff63;
+}
+
+.form__input:not(:-moz-placeholder-shown) {
+  border-color: transparent;
+}
+
+.form__input:not(:-ms-input-placeholder) {
+  border-color: transparent;
+}
+
+.form__input:not(:placeholder-shown) {
+  border-color: transparent;
+}
+
 .form__submit {
   width: 100%;
-  background: #3478FF;
+  background: #3478ff;
   border: none;
   color: white;
   cursor: pointer;
@@ -923,8 +948,8 @@
 }
 
 .form__submit:hover {
-  -webkit-box-shadow: 0 0 30px #3A82EE;
-          box-shadow: 0 0 30px #3A82EE;
+  -webkit-box-shadow: 0 0 30px #3a82ee;
+          box-shadow: 0 0 30px #3a82ee;
 }
 
 .form__agreement {
@@ -1131,7 +1156,7 @@
 
 .vacancies .vacancies__list .accordion__content .hover {
   color: #fff;
-  background: #3A82EE;
+  background: #3a82ee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1146,7 +1171,7 @@
   width: max-content;
   font-weight: 700;
   line-height: 90%;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   -webkit-transition: -webkit-box-shadow 200ms ease-out;
   transition: -webkit-box-shadow 200ms ease-out;
   -o-transition: box-shadow 200ms ease-out;
@@ -1162,8 +1187,8 @@
 }
 
 .vacancies .vacancies__list .accordion__content .hover:hover {
-  -webkit-box-shadow: 0 0 30px #3A82EE;
-          box-shadow: 0 0 30px #3A82EE;
+  -webkit-box-shadow: 0 0 30px #3a82ee;
+          box-shadow: 0 0 30px #3a82ee;
 }
 
 .vacancies .vacancies__list-item {
@@ -1185,10 +1210,13 @@
 }
 
 .vacancies .vacancies__list-item__indicator {
-  background-color: #3A82EE;
+  background-color: #3a82ee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1210,6 +1238,22 @@
 .vacancies .vacancies__list-item__indicator svg {
   width: 1.125vw;
   height: 1.125vw;
+}
+
+.vacancies .vacancies__list-item__indicator.active {
+  background-color: #c4c8cc;
+}
+
+.vacancies .vacancies__list-item__indicator.active svg {
+  display: none;
+}
+
+.vacancies .vacancies__list-item__indicator.active .vacancies__list-item__minus {
+  display: block;
+}
+
+.vacancies .vacancies__list-item__minus {
+  display: none;
 }
 
 .stat {
@@ -1469,6 +1513,11 @@
 }
 
 .partners__item {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   width: 20%;
   line-height: 0;
   display: -webkit-box;
@@ -1486,6 +1535,11 @@
 .partners__item svg {
   max-width: 100%;
   height: 100%;
+}
+
+.partners__item:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 .slide {
@@ -1648,7 +1702,7 @@
 
 .services__item {
   position: relative;
-  background: #2C2D2E;
+  background: #2c2d2e;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1669,11 +1723,29 @@
 }
 
 .services__item > svg {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   position: absolute;
   top: 1.5vw;
   right: 1.5vw;
   width: 3vw;
   height: 3vw;
+}
+
+.services__item > svg path {
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.services__item:hover > svg {
+  fill: #d6ff63;
+  stroke: #d6ff63;
+}
+
+.services__item:hover > svg path {
+  stroke: black;
 }
 
 .services__item-img {
@@ -1782,7 +1854,7 @@
 
 .footer__link {
   font-weight: 500;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   line-height: 90%;
   font-size: 1vw;
 }
@@ -1835,14 +1907,14 @@
 .footer__copy {
   font-weight: 600;
   line-height: 90%;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   font-size: 0.75vw;
 }
 
 .footer__privacy {
   font-weight: 600;
   line-height: 90%;
-  letter-spacing: -5%;
+  letter-spacing: -1px;
   color: #5D5F61;
   -webkit-transition: color 200ms ease-out;
   -o-transition: color 200ms ease-out;

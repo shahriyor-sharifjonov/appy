@@ -85,7 +85,7 @@
     }
     &__link{
         font-weight: 500;
-        letter-spacing: -5%;
+        letter-spacing: -1px;
         line-height: 100%;
         @include res('font-size', 16px);
         @include media(1400){

@@ -1,12 +1,12 @@
-@import '../abstracts/mixins';
+@import "../abstracts/mixins";
 
 .form {
-    @include res('margin-bottom', 100px);
-    @include media(1400){
-        @include resm('margin-bottom', 100px);
+    @include res("margin-bottom", 100px);
+    @include media(1400) {
+        @include resm("margin-bottom", 100px);
     }
-    @include media(576){
-        @include resa('margin-bottom', 80px);
+    @include media(576) {
+        @include resa("margin-bottom", 80px);
     }
 
     &__container {
@@ -14,17 +14,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include res('padding', 80px);
-        @include res('border-radius', 24px);
-        @include media(1400){
-            @include resm('padding', 80px);
-            @include resm('border-radius', 24px);
+        @include res("padding", 80px);
+        @include res("border-radius", 24px);
+        @include media(1400) {
+            @include resm("padding", 80px);
+            @include resm("border-radius", 24px);
         }
-        @include media(576){
-            @include resa('padding', 24px);
-            @include resa('padding-bottom', 40px);
-            @include resa('padding-top', 40px);
-            @include resa('border-radius', 24px);
+        @include media(576) {
+            @include resa("padding", 24px);
+            @include resa("padding-bottom", 40px);
+            @include resa("padding-top", 40px);
+            @include resa("border-radius", 24px);
         }
     }
 
@@ -32,16 +32,16 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        @include media(576){
+        @include media(576) {
             flex-direction: column;
-            @include resa('gap', 40px);
+            @include resa("gap", 40px);
         }
     }
 
     &__left,
     &__right {
         width: 42%;
-        @include media(576){
+        @include media(576) {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -52,18 +52,18 @@
     &__title {
         color: white;
         font-weight: 700;
-        @include res('font-size', 40px);
-        @include res('line-height', 40px);
-        @include res('margin-bottom', 24px);
-        @include media(1400){
-            @include resm('font-size', 40px);
-            @include resm('line-height', 40px);
-            @include resm('margin-bottom', 24px);
+        @include res("font-size", 40px);
+        @include res("line-height", 40px);
+        @include res("margin-bottom", 24px);
+        @include media(1400) {
+            @include resm("font-size", 40px);
+            @include resm("line-height", 40px);
+            @include resm("margin-bottom", 24px);
         }
-        @include media(576){
-            @include resa('font-size', 32px);
+        @include media(576) {
+            @include resa("font-size", 32px);
             line-height: 100%;
-            @include resa('margin-bottom', 24px);
+            @include resa("margin-bottom", 24px);
             text-align: center;
         }
     }
@@ -71,45 +71,45 @@
     &__subtitle {
         color: white;
         font-weight: 500;
-        @include res('font-size', 20px);
-        @include res('line-height', 28px);
-        @include res('margin-bottom', 40px);
-        @include media(1400){
-            @include resm('font-size', 20px);
-            @include resm('line-height', 28px);
-            @include resm('margin-bottom', 40px);
+        @include res("font-size", 20px);
+        @include res("line-height", 28px);
+        @include res("margin-bottom", 40px);
+        @include media(1400) {
+            @include resm("font-size", 20px);
+            @include resm("line-height", 28px);
+            @include resm("margin-bottom", 40px);
         }
-        @include media(576){
-            @include resa('font-size', 16px);
+        @include media(576) {
+            @include resa("font-size", 16px);
             line-height: 140%;
             text-align: center;
-            @include resa('margin-bottom', 40px);
+            @include resa("margin-bottom", 40px);
         }
     }
 
     &__profile {
         display: flex;
         align-items: center;
-        @include media(576){
+        @include media(576) {
             flex-direction: column;
-            @include resa('gap', 24px);
+            @include resa("gap", 24px);
         }
     }
 
     &__profile-img {
         border-radius: 50%;
-        @include res('margin-right', 24px);
-        @include res('width', 60px);
-        @include res('height', 60px);
-        @include media(1400){
-            @include resm('margin-right', 24px);
-            @include resm('width', 60px);
-            @include resm('height', 60px);
+        @include res("margin-right", 24px);
+        @include res("width", 60px);
+        @include res("height", 60px);
+        @include media(1400) {
+            @include resm("margin-right", 24px);
+            @include resm("width", 60px);
+            @include resm("height", 60px);
         }
-        @include media(576){
+        @include media(576) {
             margin-right: 0;
-            @include resa('width', 60px);
-            @include resa('height', 60px);
+            @include resa("width", 60px);
+            @include resa("height", 60px);
         }
     }
 
@@ -120,131 +120,138 @@
         color: white;
         border: solid white;
         font-weight: 500;
-        @include res('border-width', 1px);
-        @include res('padding', 16px);
-        @include res('padding-top', 8px);
-        @include res('padding-bottom', 8px);
-        @include res('gap', 10px);
-        @include res('border-radius', 8px);
-        @include res('font-size', 16px);
-        @include media(1400){
-            @include resm('border-width', 1px);
-            @include resm('padding', 16px);
-            @include resm('padding-top', 8px);
-            @include resm('padding-bottom', 8px);
-            @include resm('gap', 10px);
-            @include resm('border-radius', 8px);
-            @include resm('font-size', 16px);
+        @include res("border-width", 1px);
+        @include res("padding", 16px);
+        @include res("padding-top", 8px);
+        @include res("padding-bottom", 8px);
+        @include res("gap", 10px);
+        @include res("border-radius", 8px);
+        @include res("font-size", 16px);
+        @include media(1400) {
+            @include resm("border-width", 1px);
+            @include resm("padding", 16px);
+            @include resm("padding-top", 8px);
+            @include resm("padding-bottom", 8px);
+            @include resm("gap", 10px);
+            @include resm("border-radius", 8px);
+            @include resm("font-size", 16px);
         }
-        @include media(576){
-            @include resa('border-width', 1px);
-            @include resa('padding', 16px);
-            @include resa('padding-top', 8px);
-            @include resa('padding-bottom', 8px);
-            @include resa('gap', 10px);
-            @include resa('border-radius', 8px);
-            @include resa('font-size', 16px);
+        @include media(576) {
+            @include resa("border-width", 1px);
+            @include resa("padding", 16px);
+            @include resa("padding-top", 8px);
+            @include resa("padding-bottom", 8px);
+            @include resa("gap", 10px);
+            @include resa("border-radius", 8px);
+            @include resa("font-size", 16px);
         }
 
         &__icon {
-            background: linear-gradient(180deg, #2AABEE 0%, #229ED9 10000%);
+            background: linear-gradient(180deg, #2aabee 0%, #229ed9 10000%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            @include res('width', 24px);
-            @include res('height', 24px);
-            @include media(1400){
-                @include resm('width', 24px);
-                @include resm('height', 24px);
+            @include res("width", 24px);
+            @include res("height", 24px);
+            @include media(1400) {
+                @include resm("width", 24px);
+                @include resm("height", 24px);
             }
-            @include media(576){
-                @include resa('width', 24px);
-                @include resa('height', 24px);
+            @include media(576) {
+                @include resa("width", 24px);
+                @include resa("height", 24px);
             }
 
             svg {
-                @include res('width', 13px);
-                @include res('height', 13px);
-                @include media(1400){
-                    @include resm('width', 13px);
-                    @include resm('height', 13px);
+                @include res("width", 13px);
+                @include res("height", 13px);
+                @include media(1400) {
+                    @include resm("width", 13px);
+                    @include resm("height", 13px);
                 }
-                @include media(576){
-                    @include resa('width', 13px);
-                    @include resa('height', 13px);
+                @include media(576) {
+                    @include resa("width", 13px);
+                    @include resa("height", 13px);
                 }
             }
         }
-
     }
 
     &__label {
         display: block;
         color: white;
         font-weight: 500;
-        @include res('font-size', 16px);
-        @include res('margin-bottom', 8px);
-        @include media(1400){
-            @include resm('font-size', 16px);
-            @include resm('margin-bottom', 8px);
+        @include res("font-size", 16px);
+        @include res("margin-bottom", 8px);
+        @include media(1400) {
+            @include resm("font-size", 16px);
+            @include resm("margin-bottom", 8px);
         }
-        @include media(576){
-            @include resa('font-size', 16px);
-            @include resa('margin-bottom', 8px);
+        @include media(576) {
+            @include resa("font-size", 16px);
+            @include resa("margin-bottom", 8px);
         }
     }
 
     &__input {
         width: 100%;
         font-weight: 400;
+        transition: 0.3s all;
         background: #363738;
-        border: solid #5D5F61;
+        border: solid #5d5f61;
         color: white;
         outline: none;
-        @include res('padding', 16px);
-        @include res('font-size', 18px);
-        @include res('border-radius', 8px);
-        @include res('border-width', 1px);
-        @include res('margin-bottom', 24px);
-        @include media(1400){
-            @include resm('padding', 16px);
-            @include resm('font-size', 18px);
-            @include resm('border-radius', 8px);
-            @include resm('border-width', 1px);
-            @include resm('margin-bottom', 24px);
+        @include res("padding", 16px);
+        @include res("font-size", 18px);
+        @include res("border-radius", 8px);
+        @include res("border-width", 1px);
+        @include res("margin-bottom", 24px);
+        @include media(1400) {
+            @include resm("padding", 16px);
+            @include resm("font-size", 18px);
+            @include resm("border-radius", 8px);
+            @include resm("border-width", 1px);
+            @include resm("margin-bottom", 24px);
         }
-        @include media(576){
-            @include resa('padding', 16px);
-            @include resa('font-size', 18px);
-            @include resa('border-radius', 8px);
-            @include resa('border-width', 1px);
-            @include resa('margin-bottom', 24px);
+        @include media(576) {
+            @include resa("padding", 16px);
+            @include resa("font-size", 18px);
+            @include resa("border-radius", 8px);
+            @include resa("border-width", 1px);
+            @include resa("margin-bottom", 24px);
+        }
+        &:hover,
+        &:focus {
+            border-color: #d6ff63;
+        }
+        &:not(:placeholder-shown) {
+            border-color: transparent;
         }
     }
 
     &__submit {
         width: 100%;
-        background: #3478FF;
+        background: #3478ff;
         border: none;
         color: white;
         cursor: pointer;
         transition: box-shadow 200ms;
-        @include res('padding', 16px);
-        @include res('border-radius', 8px);
-        @include res('font-size', 18px);
-        @include media(1400){
-            @include resm('padding', 16px);
-            @include resm('border-radius', 8px);
-            @include resm('font-size', 18px);
+        @include res("padding", 16px);
+        @include res("border-radius", 8px);
+        @include res("font-size", 18px);
+        @include media(1400) {
+            @include resm("padding", 16px);
+            @include resm("border-radius", 8px);
+            @include resm("font-size", 18px);
         }
-        @include media(576){
-            @include resa('padding', 16px);
-            @include resa('border-radius', 8px);
-            @include resa('font-size', 18px);
+        @include media(576) {
+            @include resa("padding", 16px);
+            @include resa("border-radius", 8px);
+            @include resa("font-size", 18px);
         }
         &:hover {
-            box-shadow: 0 0 30px #3A82EE;
+            box-shadow: 0 0 30px #3a82ee;
         }
     }
 
@@ -254,15 +261,15 @@
         flex-direction: column;
         text-align: center;
         text-align: left;
-        @include res('font-size', 14px);
-        @include res('margin-top', 8px);
-        @include media(1400){
-            @include resm('font-size', 14px);
-            @include resm('margin-top', 8px);
+        @include res("font-size", 14px);
+        @include res("margin-top", 8px);
+        @include media(1400) {
+            @include resm("font-size", 14px);
+            @include resm("margin-top", 8px);
         }
-        @include media(576){
-            @include resa('font-size', 14px);
-            @include resa('margin-top', 8px);
+        @include media(576) {
+            @include resa("font-size", 14px);
+            @include resa("margin-top", 8px);
         }
 
         p {
@@ -273,7 +280,7 @@
         a {
             color: #828282;
             transition: color 200ms ease-out;
-            &:hover{
+            &:hover {
                 color: #fff;
             }
         }

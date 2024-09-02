@@ -59,127 +59,127 @@ function lerp(start, end, amount) {
   return (1 - amount) * start + amount * end;
 }
 
-const cursor = document.createElement('div');
-cursor.className = 'cursor';
+// const cursor = document.createElement('div');
+// cursor.className = 'cursor';
 
-const cursorF = document.createElement('div');
-cursorF.className = 'cursor-f';
+// const cursorF = document.createElement('div');
+// cursorF.className = 'cursor-f';
 
-let cursorX = 0;
-let cursorY = 0;
-let pageX = 0;
-let pageY = 0;
-let size = 8;
-let sizeF = 36;
-let followSpeed = .16;
+// let cursorX = 0;
+// let cursorY = 0;
+// let pageX = 0;
+// let pageY = 0;
+// let size = 8;
+// let sizeF = 36;
+// let followSpeed = .16;
 
-document.querySelector('.fixed').appendChild(cursor);
-document.querySelector('.fixed').appendChild(cursorF);
+// document.querySelector('.fixed').appendChild(cursor);
+// document.querySelector('.fixed').appendChild(cursorF);
 
-// Set initial opacity to 0
-cursor.style.opacity = 0;
-cursorF.style.opacity = 0;
+// // Set initial opacity to 0
+// cursor.style.opacity = 0;
+// cursorF.style.opacity = 0;
 
-if ('ontouchstart' in window) {
-  cursor.style.opacity = 0;
-  cursorF.style.opacity = 0;
-} else {
-  cursor.style.setProperty('--size', size + 'px');
-  cursorF.style.setProperty('--size', sizeF + 'px');
-}
+// if ('ontouchstart' in window) {
+//   cursor.style.opacity = 0;
+//   cursorF.style.opacity = 0;
+// } else {
+//   cursor.style.setProperty('--size', size + 'px');
+//   cursorF.style.setProperty('--size', sizeF + 'px');
+// }
 
-window.addEventListener('mousemove', function (e) {
-  pageX = e.clientX;
-  pageY = e.clientY;
-  cursor.style.left = e.clientX - size / 2 + 'px';
-  cursor.style.top = e.clientY - size / 2 + 'px';
+// window.addEventListener('mousemove', function (e) {
+//   pageX = e.clientX;
+//   pageY = e.clientY;
+//   cursor.style.left = e.clientX - size / 2 + 'px';
+//   cursor.style.top = e.clientY - size / 2 + 'px';
 
-  // Show cursor on mouse move
-  cursor.style.opacity = 1;
-  cursorF.style.opacity = 1;
-});
+//   // Show cursor on mouse move
+//   cursor.style.opacity = 1;
+//   cursorF.style.opacity = 1;
+// });
 
-function loop() {
-  cursorX = lerp(cursorX, pageX, followSpeed);
-  cursorY = lerp(cursorY, pageY, followSpeed);
-  cursorF.style.top = cursorY - sizeF / 2 + 'px';
-  cursorF.style.left = cursorX - sizeF / 2 + 'px';
-  requestAnimationFrame(loop);
-}
+// function loop() {
+//   cursorX = lerp(cursorX, pageX, followSpeed);
+//   cursorY = lerp(cursorY, pageY, followSpeed);
+//   cursorF.style.top = cursorY - sizeF / 2 + 'px';
+//   cursorF.style.left = cursorX - sizeF / 2 + 'px';
+//   requestAnimationFrame(loop);
+// }
 
-loop();
+// loop();
 
-let startY;
-let endY;
-let clicked = false;
+// let startY;
+// let endY;
+// let clicked = false;
 
-function mousedown(e) {
-  gsap.to(cursor, { scale: 4.5 });
-  gsap.to(cursorF, { scale: .4 });
-  clicked = true;
-  startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
-  cursor.style.opacity = 1;  // Ensure cursor is visible on interaction
-  cursorF.style.opacity = 1;
-}
+// function mousedown(e) {
+//   gsap.to(cursor, { scale: 4.5 });
+//   gsap.to(cursorF, { scale: .4 });
+//   clicked = true;
+//   startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+//   cursor.style.opacity = 1;  // Ensure cursor is visible on interaction
+//   cursorF.style.opacity = 1;
+// }
 
-function mousehover(e) {
-  gsap.to(cursor, { scale: 3 });
-  gsap.to(cursorF, { scale: .3 });
-  clicked = true;
-  startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
-  cursor.style.opacity = 1;  // Ensure cursor is visible on hover
-  cursorF.style.opacity = 1;
-}
+// function mousehover(e) {
+//   gsap.to(cursor, { scale: 3 });
+//   gsap.to(cursorF, { scale: .3 });
+//   clicked = true;
+//   startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY;
+//   cursor.style.opacity = 1;  // Ensure cursor is visible on hover
+//   cursorF.style.opacity = 1;
+// }
 
-function mouseup(e) {
-  gsap.to(cursor, { scale: 1 });
-  gsap.to(cursorF, { scale: 1 });
-  endY = e.clientY || endY;
-  if (clicked && startY && Math.abs(startY - endY) >= 40) {
-    clicked = false;
-    startY = null;
-    endY = null;
-  }
-  // Hide cursor after a delay
-  setTimeout(() => {
-    if (!clicked) {
-      cursor.style.opacity = 0;
-      cursorF.style.opacity = 0;
-    }
-  }, 500); // Adjust delay as needed
-}
+// function mouseup(e) {
+//   gsap.to(cursor, { scale: 1 });
+//   gsap.to(cursorF, { scale: 1 });
+//   endY = e.clientY || endY;
+//   if (clicked && startY && Math.abs(startY - endY) >= 40) {
+//     clicked = false;
+//     startY = null;
+//     endY = null;
+//   }
+//   // Hide cursor after a delay
+//   setTimeout(() => {
+//     if (!clicked) {
+//       cursor.style.opacity = 0;
+//       cursorF.style.opacity = 0;
+//     }
+//   }, 500); // Adjust delay as needed
+// }
 
-document.querySelectorAll('.btn:not(disabled)').forEach(el => {
-  el.addEventListener('mouseover', mousehover);
-  el.addEventListener('mouseleave', mouseup);
-});
-document.querySelectorAll('.hover').forEach(el => {
-  el.addEventListener('mouseover', mousehover);
-  el.addEventListener('mouseleave', mouseup);
-});
-window.onload = function () {
-  document.querySelectorAll('.swiper-pagination-bullet').forEach(el => {
-    el.addEventListener('mouseover', mousehover);
-    el.addEventListener('mouseleave', mouseup);
-  });
-}
-document.querySelectorAll('.floor__tab-item').forEach(el => {
-  el.addEventListener('mouseover', mousehover);
-  el.addEventListener('mouseleave', mouseup);
-});
-document.querySelectorAll('.gotoblock').forEach(el => {
-  el.addEventListener('mouseover', mousehover);
-  el.addEventListener('mouseleave', mouseup);
-});
-window.addEventListener('mousedown', mousedown, false);
-window.addEventListener('touchstart', mousedown, false);
-window.addEventListener('touchmove', function (e) {
-  if (clicked) {
-    endY = e.touches[0].clientY || e.targetTouches[0].clientY;
-  }
-}, false);
-window.addEventListener('touchend', mouseup, false);
-window.addEventListener('mouseup', mouseup, false);
+// document.querySelectorAll('.btn:not(disabled)').forEach(el => {
+//   el.addEventListener('mouseover', mousehover);
+//   el.addEventListener('mouseleave', mouseup);
+// });
+// document.querySelectorAll('.hover').forEach(el => {
+//   el.addEventListener('mouseover', mousehover);
+//   el.addEventListener('mouseleave', mouseup);
+// });
+// window.onload = function () {
+//   document.querySelectorAll('.swiper-pagination-bullet').forEach(el => {
+//     el.addEventListener('mouseover', mousehover);
+//     el.addEventListener('mouseleave', mouseup);
+//   });
+// }
+// document.querySelectorAll('.floor__tab-item').forEach(el => {
+//   el.addEventListener('mouseover', mousehover);
+//   el.addEventListener('mouseleave', mouseup);
+// });
+// document.querySelectorAll('.gotoblock').forEach(el => {
+//   el.addEventListener('mouseover', mousehover);
+//   el.addEventListener('mouseleave', mouseup);
+// });
+// window.addEventListener('mousedown', mousedown, false);
+// window.addEventListener('touchstart', mousedown, false);
+// window.addEventListener('touchmove', function (e) {
+//   if (clicked) {
+//     endY = e.touches[0].clientY || e.targetTouches[0].clientY;
+//   }
+// }, false);
+// window.addEventListener('touchend', mouseup, false);
+// window.addEventListener('mouseup', mouseup, false);
 
 
 
@@ -244,16 +244,15 @@ function contentAnimation() {
     $(".accordion > .accordion__button").on("click", function () {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
-        $(this)
-          .siblings(".accordion__content")
-          .slideUp(200);
+        $(this).siblings(".accordion__content").slideUp(200);
+        $(this).find(".vacancies__list-item__indicator").removeClass("active");
       } else {
         $(".accordion > .accordion__button").removeClass("active");
+        $(".vacancies__list-item__indicator").removeClass("active");
         $(this).addClass("active");
         $(".accordion__content").slideUp(200);
-        $(this)
-          .siblings(".accordion__content")
-          .slideDown(200);
+        $(this).siblings(".accordion__content").slideDown(200);
+        $(this).find(".vacancies__list-item__indicator").addClass("active");
       }
     });
   });
@@ -329,6 +328,17 @@ function contentAnimation() {
         },
       });
       trafic.from(".trafic__item", { delay: .3, duration: .3, opacity: 0, stagger: .07 })
+
+      const hello = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hello__avatars-avatar",
+          start: "top 80%",
+          markers: false,
+          scrub: false,
+        },
+      });
+      hello.from(".hello__avatars-avatar", { delay: .3, duration: .4, opacity: 0, stagger: .07 })
+
     },
     "(min-width: 576px)": function () {
       const item = gsap.timeline({
