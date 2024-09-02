@@ -222,12 +222,12 @@ function contentAnimation() {
 
       animateText();
 
-      setTimeout(swapText, 6000);
-    }, 6000);
+      setTimeout(swapText, 15000);
+    }, 15000);
   }
 
   animateText();
-  setTimeout(swapText, 6000);
+  setTimeout(swapText, 15000);
 
 
   const swiper = new Swiper('.slide__swiper', {
