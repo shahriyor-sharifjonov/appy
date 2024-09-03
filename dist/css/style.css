@@ -1305,7 +1305,7 @@
 
 .stat__item {
   position: relative;
-  color: #0A0A0A;
+  color: #0a0a0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1326,15 +1326,15 @@
 }
 
 .stat__item.white {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .stat__item.yellow {
-  background: #D6FF63;
+  background: #d6ff63;
 }
 
 .stat__item.black {
-  background: url("../img/texture.png") top right no-repeat, #2C2D2E;
+  background: url("../img/texture.png") top right no-repeat, #2c2d2e;
   color: #fff;
 }
 
@@ -1343,11 +1343,11 @@
 }
 
 .stat__item.black.sec {
-  background: url("../img/texture-2.png") bottom right no-repeat, #2C2D2E;
+  background: url("../img/texture-2.png") bottom right no-repeat, #2c2d2e;
 }
 
 .stat__item.red {
-  background: #E64646;
+  background: #e64646;
   color: #fff;
 }
 
@@ -1451,6 +1451,11 @@
 .stat__item-content svg {
   width: 100%;
   height: 100%;
+  display: none;
+}
+
+.stat__item-content .pc {
+  display: block;
 }
 
 .stat__item-desc {
@@ -1546,7 +1551,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #0A0A0A;
+  background: #0a0a0a;
   isolation: isolate;
   padding-top: 6.25vw;
   padding-bottom: 6.25vw;
@@ -1555,7 +1560,7 @@
 .slide::before {
   content: "";
   position: absolute;
-  background: #D6FF63;
+  background: #d6ff63;
   -webkit-filter: blur(400px);
           filter: blur(400px);
   border-radius: 50%;
@@ -1620,8 +1625,8 @@
 }
 
 .slide__nav-btn.active {
-  background: #3A82EE;
-  border-color: #3A82EE;
+  background: #3a82ee;
+  border-color: #3a82ee;
 }
 
 .slide__carousel {
@@ -3273,6 +3278,14 @@ ul.transition li {
     margin-top: 6.4vw;
   }
 
+  .stat__item-content svg {
+    display: block;
+  }
+
+  .stat__item-content .pc {
+    display: none;
+  }
+
   .stat__item-desc {
     letter-spacing: -0.1333333333vw;
     font-size: 6.4vw;
@@ -3339,6 +3352,9 @@ ul.transition li {
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow-x: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     min-width: 100vw;
     margin-left: -4.2666666667vw;
     margin-right: -4.2666666667vw;

@@ -1,180 +1,185 @@
-@import '../abstracts/mixins';
-.slide{
+@import "../abstracts/mixins";
+.slide {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: #0A0A0A;
+    background: #0a0a0a;
     isolation: isolate;
-    @include res('padding-top', 100px);
-    @include res('padding-bottom', 100px);
-    @include media(1400){
-        @include resm('padding-top', 100px);
-        @include resm('padding-bottom', 100px);
+    @include res("padding-top", 100px);
+    @include res("padding-bottom", 100px);
+    @include media(1400) {
+        @include resm("padding-top", 100px);
+        @include resm("padding-bottom", 100px);
     }
-    @include media(576){
-        @include resa('padding-top', 52px);
-        @include resa('padding-bottom', 52px);
+    @include media(576) {
+        @include resa("padding-top", 52px);
+        @include resa("padding-bottom", 52px);
     }
-    &::before{
+    &::before {
         content: "";
         position: absolute;
-        background: #D6FF63;
+        background: #d6ff63;
         filter: blur(400px);
         border-radius: 50%;
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
         opacity: 15%;
-        @include res('bottom', -970px);
-        @include res('width', 1495px);
-        @include res('height', 1495px);
-        @include media(1400){
-            @include resm('bottom', -970px);
-            @include resm('width', 1495px);
-            @include resm('height', 1495px);
+        @include res("bottom", -970px);
+        @include res("width", 1495px);
+        @include res("height", 1495px);
+        @include media(1400) {
+            @include resm("bottom", -970px);
+            @include resm("width", 1495px);
+            @include resm("height", 1495px);
         }
-        @include media(576){
-            @include resa('bottom', -970px);
-            @include resa('width', 1495px);
-            @include resa('height', 1495px);
+        @include media(576) {
+            @include resa("bottom", -970px);
+            @include resa("width", 1495px);
+            @include resa("height", 1495px);
         }
     }
-    &__title{
+    &__title {
         text-align: center;
         font-weight: 700;
         margin-left: auto;
         margin-right: auto;
-        @include res('letter-spacing', -1px);
-        @include res('font-size', 56px);
-        @include res('max-width', 800px);
-        @include res('margin-bottom', 24px);
-        @include media(1400){
-            @include resm('font-size', 48px);
-            @include resm('max-width', 640px);
-            @include resm('letter-spacing', -1px);
-            @include resm('margin-bottom', 24px);
+        @include res("letter-spacing", -1px);
+        @include res("font-size", 56px);
+        @include res("max-width", 800px);
+        @include res("margin-bottom", 24px);
+        @include media(1400) {
+            @include resm("font-size", 48px);
+            @include resm("max-width", 640px);
+            @include resm("letter-spacing", -1px);
+            @include resm("margin-bottom", 24px);
         }
-        @include media(576){
-            @include resa('font-size', 40px);
-            @include resa('max-width', 640px);
-            @include resa('letter-spacing', -1px);
-            @include resa('margin-bottom', 24px);
+        @include media(576) {
+            @include resa("font-size", 40px);
+            @include resa("max-width", 640px);
+            @include resa("letter-spacing", -1px);
+            @include resa("margin-bottom", 24px);
         }
     }
-    &__p{
+    &__p {
         line-height: 140%;
         text-align: center;
-        @include res('letter-spacing', -1px);
-        @include res('font-size', 20px);
-        @include res('margin-bottom', 24px);
-        @include media(1400){
-            @include resm('letter-spacing', -1px);
-            @include resm('font-size', 20px);
-            @include resm('margin-bottom', 24px);
+        @include res("letter-spacing", -1px);
+        @include res("font-size", 20px);
+        @include res("margin-bottom", 24px);
+        @include media(1400) {
+            @include resm("letter-spacing", -1px);
+            @include resm("font-size", 20px);
+            @include resm("margin-bottom", 24px);
         }
-        @include media(576){
-            @include resa('letter-spacing', -1px);
-            @include resa('font-size', 16px);
-            @include resa('margin-bottom', 24px);
+        @include media(576) {
+            @include resa("letter-spacing", -1px);
+            @include resa("font-size", 16px);
+            @include resa("margin-bottom", 24px);
         }
     }
-    &__nav{
+    &__nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        @include res('gap', 8px);
-        @include res('margin-bottom', 24px);
-        @include media(1400){
-            @include resm('gap', 8px);
-            @include resm('margin-bottom', 24px);
+        @include res("gap", 8px);
+        @include res("margin-bottom", 24px);
+        @include media(1400) {
+            @include resm("gap", 8px);
+            @include resm("margin-bottom", 24px);
         }
-        @include media(576){
+        @include media(576) {
             justify-content: flex-start;
             overflow-x: auto;
-            @include resa('min-width', 375px);
-            @include resa('margin-left', -16px);
-            @include resa('margin-right', -16px);
-            @include resa('padding-left', 16px);
-            @include resa('padding-right', 16px);
-            @include resa('gap', 8px);
-            @include resa('margin-bottom', 24px);
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            @include resa("min-width", 375px);
+            @include resa("margin-left", -16px);
+            @include resa("margin-right", -16px);
+            @include resa("padding-left", 16px);
+            @include resa("padding-right", 16px);
+            @include resa("gap", 8px);
+            @include resa("margin-bottom", 24px);
         }
-        &-btn{
+        &-btn {
             color: #fff;
             border: solid #fff;
-            transition: background 200ms ease-out, border-color 200ms ease-out;
-            @include res('border-radius', 100px);
-            @include res('border-width', 1px);
-            @include res('padding-top', 10px);
-            @include res('padding-bottom', 10px);
-            @include res('padding-left', 24px);
-            @include res('padding-right', 24px);
-            @include res('font-size', 16px);
-            @include res('letter-spacing', -1px);
-            @include media(1400){
-                @include resm('border-radius', 100px);
-                @include resm('border-width', 1px);
-                @include resm('padding-top', 10px);
-                @include resm('padding-bottom', 10px);
-                @include resm('padding-left', 24px);
-                @include resm('padding-right', 24px);
-                @include resm('font-size', 16px);
-                @include resm('letter-spacing', -1px);
+            transition:
+                background 200ms ease-out,
+                border-color 200ms ease-out;
+            @include res("border-radius", 100px);
+            @include res("border-width", 1px);
+            @include res("padding-top", 10px);
+            @include res("padding-bottom", 10px);
+            @include res("padding-left", 24px);
+            @include res("padding-right", 24px);
+            @include res("font-size", 16px);
+            @include res("letter-spacing", -1px);
+            @include media(1400) {
+                @include resm("border-radius", 100px);
+                @include resm("border-width", 1px);
+                @include resm("padding-top", 10px);
+                @include resm("padding-bottom", 10px);
+                @include resm("padding-left", 24px);
+                @include resm("padding-right", 24px);
+                @include resm("font-size", 16px);
+                @include resm("letter-spacing", -1px);
             }
-            @include media(576){
-                @include resa('border-radius', 100px);
-                @include resa('border-width', 1px);
-                @include resa('padding-top', 10px);
-                @include resa('padding-bottom', 10px);
-                @include resa('padding-left', 24px);
-                @include resa('padding-right', 24px);
-                @include resa('font-size', 16px);
-                @include resa('letter-spacing', -1px);
+            @include media(576) {
+                @include resa("border-radius", 100px);
+                @include resa("border-width", 1px);
+                @include resa("padding-top", 10px);
+                @include resa("padding-bottom", 10px);
+                @include resa("padding-left", 24px);
+                @include resa("padding-right", 24px);
+                @include resa("font-size", 16px);
+                @include resa("letter-spacing", -1px);
             }
-            &.active{
-                background: #3A82EE;
-                border-color: #3A82EE;
+            &.active {
+                background: #3a82ee;
+                border-color: #3a82ee;
             }
         }
     }
-    &__carousel{
+    &__carousel {
         overflow: hidden;
         margin-left: auto;
         margin-right: auto;
-        @include res('width', 792px);
-        @include media(1400){
-            @include resm('width', 792px);
+        @include res("width", 792px);
+        @include media(1400) {
+            @include resm("width", 792px);
         }
-        @include media(576){
-            @include resa('width', 287px);
+        @include media(576) {
+            @include resa("width", 287px);
         }
     }
-    &__swiper{
+    &__swiper {
         width: 100%;
         overflow: hidden;
     }
-    &__wrapper{
+    &__wrapper {
         display: flex;
         width: max-content;
     }
-    &__item{
+    &__item {
         opacity: 0;
         transition: opacity 200ms ease-out;
-        @include media(576){
-            &>img{
+        @include media(576) {
+            & > img {
                 display: none;
             }
         }
-        &.swiper-slide-active{
+        &.swiper-slide-active {
             opacity: 1;
         }
-        .sm{
+        .sm {
             display: none;
-            @include media(576){
+            @include media(576) {
                 display: block;
             }
         }
-        img{
+        img {
             width: 100%;
         }
     }

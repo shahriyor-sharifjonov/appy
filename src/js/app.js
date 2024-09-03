@@ -194,14 +194,13 @@ function pageTransition() {
 
 function contentAnimation() {
   var tl = gsap.timeline();
-  tl.from('.intro__desc', { duration: .3, translateY: 10, opacity: 0 })
-  tl.from('.intro__btn', { duration: .3, translateY: 10, opacity: 0 })
-  tl.to('.intro__img', { opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, "-=.5")
-
+  tl.from('.intro__desc', { duration: .3, translateY: 10, opacity: 0 });
+  tl.from('.intro__btn', { duration: .3, translateY: 10, opacity: 0 });
+  tl.to('.intro__img', { opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, "-=.5");
 
   function animateText() {
     var tl = gsap.timeline();
-    tl.from(".intro__title-box .line span", 1, { y: 120, ease: "power1.out", delay: 1, skewY: 10, stagger: { amount: 0 } }, "-=1.1")
+    tl.from(".intro__title-box .line span", 1, { y: 120, ease: "power1.out", delay: 1, skewY: 10, stagger: { amount: 0 } }, "-=1.1");
     return tl;
   }
 
@@ -210,25 +209,22 @@ function contentAnimation() {
     const texts2 = document.querySelectorAll('.text2');
 
     texts1.forEach(text => text.classList.remove('visible'));
-
     texts2.forEach(text => text.classList.add('visible'));
 
     animateText();
 
     setTimeout(() => {
       texts2.forEach(text => text.classList.remove('visible'));
-
       texts1.forEach(text => text.classList.add('visible'));
 
       animateText();
 
-      setTimeout(swapText, 15000);
-    }, 15000);
+      setTimeout(swapText, 3000);
+    }, 3000);
   }
 
   animateText();
-  setTimeout(swapText, 15000);
-
+  setTimeout(swapText, 3000);
 
   const swiper = new Swiper('.slide__swiper', {
     loop: true,
