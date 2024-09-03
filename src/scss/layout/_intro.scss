@@ -154,6 +154,7 @@
         isolation: isolate;
         opacity: 0;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        animation: scale 3.5s infinite;
         @include res("width", 588px);
         @include media(1400) {
             @include resm("width", 476px);
@@ -194,7 +195,7 @@
             @include res("left", 146px);
             @include res("width", 323px);
             @include res("height", 127px);
-            animation: scale 2s infinite;
+            animation: scale 3.5s infinite;
             filter: drop-shadow(0 0 10px #00000040);
             @include media(1400) {
                 @include resm("top", 76px);
@@ -233,7 +234,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(0.96);
+        transform: scale(0.97);
     }
     100% {
         transform: scale(1);

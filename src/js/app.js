@@ -181,7 +181,7 @@ function lerp(start, end, amount) {
 // window.addEventListener('touchend', mouseup, false);
 // window.addEventListener('mouseup', mouseup, false);
 
-
+let num = 0
 
 
 import barba from '@barba/core';
@@ -193,38 +193,47 @@ function pageTransition() {
 }
 
 function contentAnimation() {
+  console.log('hello');
   var tl = gsap.timeline();
   tl.from('.intro__desc', { duration: .3, translateY: 10, opacity: 0 });
   tl.from('.intro__btn', { duration: .3, translateY: 10, opacity: 0 });
   tl.to('.intro__img', { opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, "-=.5");
 
-  function animateText() {
-    var tl = gsap.timeline();
-    tl.from(".intro__title-box .line span", 1, { y: 120, ease: "power1.out", delay: 1, skewY: 10, stagger: { amount: 0 } }, "-=1.1");
-    return tl;
-  }
+  let textTimeline = gsap.timeline({ paused: true });
+
+  textTimeline.from(".intro__title-box .line span", 1, {
+    y: 120,
+    ease: "power1.out",
+    delay: 0.3,
+    skewY: 10,
+    stagger: { amount: 0 }
+  });
 
   function swapText() {
+    num++;
+    console.log(num);
+
     const texts1 = document.querySelectorAll('.text1');
     const texts2 = document.querySelectorAll('.text2');
 
     texts1.forEach(text => text.classList.remove('visible'));
     texts2.forEach(text => text.classList.add('visible'));
 
-    animateText();
+    textTimeline.restart();
 
     setTimeout(() => {
       texts2.forEach(text => text.classList.remove('visible'));
       texts1.forEach(text => text.classList.add('visible'));
 
-      animateText();
+      textTimeline.restart();
 
       setTimeout(swapText, 3000);
     }, 3000);
   }
 
-  animateText();
+  textTimeline.play();
   setTimeout(swapText, 3000);
+
 
   const swiper = new Swiper('.slide__swiper', {
     loop: true,
@@ -301,9 +310,35 @@ function contentAnimation() {
           start: "top 90%",
           markers: false,
           scrub: false,
+          onEnter: () => waveAnimation()
         },
       });
-      stats.from(".stat__item-content svg rect", { duration: .3, scaleY: 0, transformOrigin: "bottom", stagger: .1 })
+
+      stats.from(".stat__item-content svg rect", { duration: .3, scaleY: 0, transformOrigin: "bottom", stagger: .1 });
+
+      function randomScaleY() {
+        return Math.random() * 0.5 + 0.5;
+      }
+
+      function waveAnimation() {
+        const rects = document.querySelectorAll(".stat__item-content svg rect");
+
+        function animateRects() {
+          gsap.to(rects, {
+            scaleY: function () {
+              return randomScaleY();
+            },
+            transformOrigin: "bottom",
+            duration: 1.5,
+            yoyo: true,
+            stagger: 0.1,
+            ease: "sine.inOut",
+            onComplete: animateRects
+          });
+        }
+
+        animateRects();
+      }
 
       const people = gsap.timeline({
         scrollTrigger: {
