@@ -181,8 +181,6 @@ function lerp(start, end, amount) {
 // window.addEventListener('touchend', mouseup, false);
 // window.addEventListener('mouseup', mouseup, false);
 
-let num = 0
-
 
 import barba from '@barba/core';
 
@@ -193,7 +191,6 @@ function pageTransition() {
 }
 
 function contentAnimation() {
-  console.log('hello');
   var tl = gsap.timeline();
   tl.from('.intro__desc', { duration: .3, translateY: 10, opacity: 0 });
   tl.from('.intro__btn', { duration: .3, translateY: 10, opacity: 0 });
@@ -210,9 +207,6 @@ function contentAnimation() {
   });
 
   function swapText() {
-    num++;
-    console.log(num);
-
     const texts1 = document.querySelectorAll('.text1');
     const texts2 = document.querySelectorAll('.text2');
 
